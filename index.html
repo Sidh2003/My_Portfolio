@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth ">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Siddhesh</title>
+  <link rel="shortcut icon" href="./images/Logo/Web_logo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Ensure smooth menu transitions */
+    #sideMenu {
+      transform: translateX(16rem); /* Start hidden off-screen */
+      transition: transform 0.5s ease; /* Smooth animation */
+    }
+    #logo1 {
+  color: rgb(87, 0, 128);
+  font-weight: bold; /* Ensures boldness */
+  
+}
+
+  </style>
+</head>
+<body class="overflow-x-hidden font-Outfit leading-8 ">
+  <!-- Background Image -->
+  <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+    <img src="./images/header-bg-color.png" alt="Header Background" class="w-full">
+  </div>
+
+  <!-- Navigation -->
+  <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+    <!-- Logo -->
+     <!-- <h1 class="w-50 cursor-pointer mr-14" id="logo1"><span></span>Siddhesh</h1> -->
+    <img src="images/Logo/Logo-1.png" alt="Logo" class="w-28 cursor-pointer mr-14">
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+      <li><a href="#top" class="hover:text-rose-500">Home</a></li>
+      <li><a href="#about" class="hover:text-rose-500">About Me</a></li>
+      <li><a href="#services" class="hover:text-rose-500">Services</a></li>
+      <li><a href="#work" class="hover:text-rose-500">My Work</a></li>
+      <li><a href="#contact" class="hover:text-rose-500">Contact Me</a></li>
+    </ul>
+
+    <!-- Mobile Actions -->
+    <div class="flex gap-4">
+      <button><a href="https://wa.me/918928678948" class="chat-btn" target="_blank"><img src="./images/—Pngtree—whatsapp mobile software icon_8704828.png" alt="Toggle Theme" class="w-6"></a></button>
+      <a href="#contact" class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4">
+        Contact <img src="./images/arrow-icon.png" alt="" class="w-3">
+      </a>
+      <button class="block md:hidden ml-3" onclick="openMenu()">
+        <img src="./images/menu-black.png" alt="Menu" class="w-6">
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <ul
+      id="sideMenu"
+      class="flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 right-0 bottom-0 w-64 z-50 h-screen bg-rose-50">
+      <div class="absolute right-6 top-6" onclick="closeMenu()">
+        <img id="closeButton" src="./images/close-black.png" alt="Close" class="w-5 cursor-pointer">
+      </div>
+      <li class="mb-4"><a href="#top" class="text-gray-700 hover:text-rose-500">Home</a></li>
+      <li class="mb-4"><a href="#about" class="text-gray-700 hover:text-rose-500">About Me</a></li>
+      <li class="mb-4"><a href="#services" class="text-gray-700 hover:text-rose-500">Services</a></li>
+      <li class="mb-4"><a href="#work" class="text-gray-700 hover:text-rose-500">My Work</a></li>
+      <li><a href="#contact" class="text-gray-700 hover:text-rose-500">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- --------- header -------------- -->
+
+    <div class="w-11/12 max-w-3xl text-center
+    mx-auto h-screen flex flex-col items-center justify-center gap-4">
+      <img src="images/My_Pic.jpeg" alt="" class="rounded-full w-32">
+      <h3 class="flex items-center gap-2 text-xl md:text-2xl mb-3">Hii ! I'm Siddhesh Sonavane <img src="./images/hand-icon.png" alt="" class="w-6"></h3>
+      <h1 
+      class="text-3xl sm:text-6xl lg:text-[60px] animate-slide-fade" style="font-family:'Times New Roman', Times, serif">
+      Frontend Web Developer.
+    </h1>
+    
+    <style>
+      @keyframes slideFadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+      .animate-slide-fade {
+        animation: slideFadeIn 2s ease-out;
+      }
+    </style>
+    
+      <p class="max-w-2xl mx-auto">I am eager to apply my expertise to real-world challenges and contribute to the success of innovative projects!</p>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <a href="#contact" 
+           class="px-10 py-3 border border-transparent rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white text-lg font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-shadow duration-300">
+          Contact me 
+          <img src="./images/right-arrow-white.png" alt="" class="w-4">
+        </a>
+        <a href="./images/My_Resume.pdf" download  
+           class="px-10 py-3 border border-transparent rounded-full border-gray-500  text-lg font-semibold flex items-center justify-center gap-2 bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
+         My resume
+          <img src="./images/download-icon.png" alt="" class="w-4">
+        </a>
+      </div>
+      
+    </div>
+
+    <!-- ------------ About Me ----------------- -->
+
+    <div id="about" class="w-full px-[12%] py-10 bg-gray-50 scroll-mt-15">
+      <h2 class="text-center text-5xl font-bold text-gray-800">About Me</h2>
+    
+      <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+        <!-- Image Section -->
+        <div class="max-w-max mx-auto relative">
+          <!-- Profile Image -->
+          <img src="./images/about-Photoroom.jpg" alt="Siddhesh Sonavane Profile Picture" class="w-64 sm:w-80 rounded-lg shadow-lg">
+    
+          <!-- Circular Design -->
+          <div 
+            class="w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/2 translate-y-1/2 
+                   shadow-[0_4px_55px_rgba(149,0,162,0.3)] flex items-center justify-center bg-transparent">
+            <!-- Circular Text -->
+            <img src="./images/circular-text.png" alt="Creative Circular Text Design" class="w-full slow-spin">
+            <!-- Developer Icon -->
+            <img src="./images/blogger.png" alt="Developer Icon in the Circular Design" class="w-1/4 absolute top-1/2 left-1/2 
+                 -translate-x-1/2 -translate-y-1/2">
+          </div>
+          <style>
+            @keyframes slowSpin {
+              0% {
+                transform: rotate(0deg);
+              }
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+    
+            .slow-spin {
+              animation: slowSpin 6s linear infinite;
+            }
+          </style>
+        </div>
+    
+        <!-- Content Section -->
+        <div class="flex-1">
+          <p class="mb-10 max-w-2xl text-gray-700 leading-relaxed">
+            Hi, I'm Siddhesh Sonavane, a passionate web developer with expertise in creating dynamic and responsive web applications.
+            I have a B.Sc. in Information Technology (2023) and am currently pursuing my MCA. Over the years, I've honed my skills in 
+            technologies like HTML, CSS, JavaScript, Laravel, and PHP, enabling me to build robust and user-friendly solutions.
+          </p>
+    
+          <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+            <!-- Skill Card -->
+            <li class="border border-gray-300 rounded-xl p-6 shadow-sm transition-shadow duration-300 
+                       cursor-pointer hover:bg-[#fcf4ff] transform hover:-translate-y-1 hover:shadow-[4px_4px_0_#000]">
+              <img src="./images/coding.png" alt="Code Icon Representing Programming Skills" class="w-10 mx-auto mb-4">
+              <h3 class="text-center font-semibold text-gray-800">Languages</h3>
+              <p class="text-center text-gray-600 text-sm mt-2">
+                HTML, CSS, JavaScript, Laravel, PHP
+              </p>
+            </li>
+            <li class="border border-gray-300 rounded-xl p-6 shadow-sm transition-shadow duration-300 
+                       cursor-pointer hover:bg-[#fcf4ff] transform hover:-translate-y-1 hover:shadow-[4px_4px_0_#000]">
+              <img src="./images/online-learning.png" alt="Education Icon" class="w-10 mx-auto mb-4">
+              <h3 class="text-center font-semibold text-gray-800">Education</h3>
+              <p class="text-center text-gray-600 text-sm mt-2">
+                B.Sc. in IT (2023)<br>MCA Pursuing
+              </p>
+            </li>
+            <li class="border border-gray-300 rounded-xl p-6 shadow-sm transition-shadow duration-300 
+                       cursor-pointer hover:bg-[#fcf4ff] transform hover:-translate-y-1 hover:shadow-[4px_4px_0_#000]">
+              <img src="./images/hackathon.png" alt="Project Icon Representing Work Experience" class="w-10 mx-auto mb-4">
+              <h3 class="text-center font-semibold text-gray-800">Projects</h3>
+              <p class="text-center text-gray-600 text-sm mt-2">
+                Built 50+ Projects (Web Apps, Portfolios, E-Commerce)
+              </p>
+            </li>
+          </ul>
+    
+          <div class="mt-14">
+            <!-- Section Heading -->
+            <h4 class="my-10 text-gray-700 text-xl font-bold text-center tracking-wide" style="font-family:'Times New Roman', Times, serif">Technologies & Tools I Work With</h4>
+
+    
+            <!-- Tools List -->
+            <ul class="flex flex-wrap items-center gap-5 sm:gap-7 justify-center">
+              <li class="w-14 aspect-square relative group">
+                <button 
+                  class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
+                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
+                  aria-label="HTML">
+                  <img src="./images/html.png" alt="HTML Logo" class="w-8">
+                </button>
+                <!-- Tooltip -->
+                <span 
+                  class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
+                         group-hover:opacity-100 transition-opacity duration-300">
+                  HTML
+                </span>
+              </li>
+            
+              <li class="w-14 aspect-square relative group">
+                <button 
+                  class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
+                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
+                  aria-label="CSS">
+                  <img src="./images/css-3.png" alt="CSS Logo" class="w-8">
+                </button>
+                <!-- Tooltip -->
+                <span 
+                  class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
+                         group-hover:opacity-100 transition-opacity duration-300">
+                  CSS
+                </span>
+              </li>
+            
+              <li class="w-14 aspect-square relative group">
+                <button 
+                  class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
+                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
+                  aria-label="JavaScript">
+                  <img src="./images/js.png" alt="JavaScript Logo" class="w-8">
+                </button>
+                <!-- Tooltip -->
+                <span 
+                  class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
+                         group-hover:opacity-100 transition-opacity duration-300">
+                  JavaScript
+                </span>
+              </li>
+            
+              <li class="w-14 aspect-square relative group">
+                <button 
+                  class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
+                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
+                  aria-label="JavaScript">
+                  <img src="./images/sql-server.png" alt="Sql" class="w-8">
+                </button>
+                <!-- Tooltip -->
+                <span 
+                  class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
+                         group-hover:opacity-100 transition-opacity duration-300">
+                 Sql
+                </span>
+              </li>
+
+              <li class="w-14 aspect-square relative group">
+                <button 
+                  class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
+                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
+                  aria-label="JavaScript">
+                  <img src="./images/php.png" alt="php" class="w-8">
+                </button>
+                <!-- Tooltip -->
+                <span 
+                  class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
+                         group-hover:opacity-100 transition-opacity duration-300">
+                 Php
+                </span>
+              </li>
+
+              <li class="w-14 aspect-square relative group">
+                <button 
+                  class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
+                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
+                  aria-label="JavaScript">
+                  <img src="./images/laravel.png" alt="Laravel" class="w-8">
+                </button>
+                <!-- Tooltip -->
+                <span 
+                  class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
+                         group-hover:opacity-100 transition-opacity duration-300">
+                 Laravel
+                </span>
+              </li>
+
+              <li class="w-14 aspect-square relative group">
+                <button 
+                  class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
+                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
+                  aria-label="JavaScript">
+                  <img src="./images/figma.png" alt="figma" class="w-8">
+                </button>
+                <!-- Tooltip -->
+                <span 
+                  class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
+                         group-hover:opacity-100 transition-opacity duration-300">
+                         figma
+                </span>
+              </li>
+
+              <li class="w-14 aspect-square relative group">
+                <button 
+                  class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
+                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
+                  aria-label="JavaScript">
+                  <img src="./images/git.png" alt="Git" class="w-8">
+                </button>
+                <!-- Tooltip -->
+                <span 
+                  class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
+                         group-hover:opacity-100 transition-opacity duration-300">
+                         Git
+                </span>
+              </li>
+            
+            
+              <!-- Repeat for other items -->
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ------------------ Services --------------------- -->
+
+    <div id="services" class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-10 scroll-mt-20 overflow-x-hidden">
+      <h4 class="text-center mb-2 text-lg">What I Offer</h4>
+      <h2 class="text-center text-5xl font-bold text-gray-800" style="font-family:'Times New Roman', Times, serif">My Services</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+        I specialize in delivering high-quality digital solutions tailored to meet your business goals. With expertise in modern technologies and a user-focused approach, I ensure that every project I undertake adds value and drives success.
+      </p>
+    
+      <div class="grid grid-cols-auto sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
+        <!-- Web Design -->
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+          <img src="./images/mobile.png" alt="Web Design Icon" class="w-10">
+          <h3 class="text-lg my-4 text-gray-700">Responsive Website Development</h3>
+          <p class="text-sm text-gray-600 leading-5">Designing and developing responsive and visually appealing websites that look great on all devices (mobile, tablet, and desktop).</p>
+          
+        </div>
+    
+        <!-- Mobile App -->
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+          <img src="./images/data.png" alt="Mobile App Icon" class="w-10">
+          <h3 class="text-lg my-4 text-gray-700">Backend Development with Laravel</h3>
+          <p class="text-sm text-gray-600 leading-5">Developing robust and secure backend systems for websites and applications using Laravel, including database management and API integrations.
+          </p>
+         
+        </div>
+    
+        <!-- UI/UX Design -->
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+          <img src="./images/ui.png" alt="UI/UX Design Icon" class="w-10">
+          <h3 class="text-lg my-4 text-gray-700">UI/UX Design</h3>
+          <p class="text-sm text-gray-600 leading-5">Creating visually appealing and user-centered designs using Figma to enhance the user experience of websites and web applications.</p>
+          
+        </div>
+    
+        <!-- Graphics Design -->
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+          <img src="./images/database-storage.png" alt="Graphics Design Icon" class="w-10">
+          <h3 class="text-lg my-4 text-gray-700">Backend Development with Database Management</h3>
+          <p class="text-sm text-gray-600 leading-5">Creating robust backend systems using Laravel with SQL databases to handle user authentication, CRUD operations, and data relationships.</p>
+          
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- -------------------- My Work -------------------- -->
+
+    <div id="work" class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-10 scroll-mt-20 overflow-hidden">
+      <h4 class="text-center mb-2 text-lg">My Portfolio</h4>
+      <h2 class="text-center text-5xl font-bold text-gray-800" style="font-family:'Times New Roman', Times, serif">My Latest Work</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+        Explore some of the projects I have worked on, ranging from responsive website design to dynamic backend development and creative UI/UX solutions. Each project showcases my dedication to quality, innovation, and user-centered design.
+      </p>
+    
+      <div id="project-cards" class="grid grid-cols-auto sm:grid-cols-2 lg:grid-cols-4 my-10 gap-5">
+        <!-- Project Cards -->
+        <div class="aspect-square bg-[url('./images/Hotel.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+          <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+            <div>
+              <!-- Updated link to ensure proper anchor tag structure -->
+              <a href="https://sidh2003.github.io/Sonavane-Resorts/" target="_blank" rel="noopener noreferrer">
+                <p class="text-sm text-gray-700">Hotel Booking Website</p>
+              </a>
+            </div>
+            <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition relative">
+              <!-- Added alt text for accessibility and fixed anchor around the image -->
+              <a href="https://sidh2003.github.io/Sonavane-Resorts/" target="_blank" rel="noopener noreferrer">
+                <img src="./images/send-icon.png" alt="Send Icon" class="w-5">
+              </a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="aspect-square bg-[url('./images/robot-handshake-human-background-futuristic-digital-age.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+          <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+            <div>
+              <!-- Updated link to ensure proper anchor tag structure -->
+              <a href="https://sidh2003.github.io/Sonavane-Resorts/" target="_blank" rel="noopener noreferrer">
+                <p class="text-sm text-gray-700">Robot Voice Assistant</p>
+              </a>
+            </div>
+            <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition relative">
+              <!-- Added alt text for accessibility and fixed anchor around the image -->
+              <a href="https://sidh2003.github.io/Sonavane-Resorts/" target="_blank" rel="noopener noreferrer">
+                <img src="./images/send-icon.png" alt="Send Icon" class="w-5">
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        
+    
+        <div class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+          <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+            <div>
+              <h2 class="font-semibold">Frontend Project</h2>
+              <p class="text-sm text-gray-700">Web Design</p>
+            </div>
+            <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+              <img src="./images/send-icon.png" alt="Send Icon" class="w-5">
+            </div>
+          </div>
+        </div>
+    
+        <div class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+          <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+            <div>
+              <h2 class="font-semibold">Frontend Project</h2>
+              <p class="text-sm text-gray-700">Web Design</p>
+            </div>
+            <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+              <img src="./images/send-icon.png" alt="Send Icon" class="w-5">
+            </div>
+          </div>
+        </div>
+    
+        <!-- Hidden 5th card
+        <div id="fifth-card" class="aspect-square bg-[url('./images/work-5.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group hidden">
+          <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+            <div>
+              <h2 class="font-semibold">Frontend Project</h2>
+              <p class="text-sm text-gray-700">Web Design</p>
+            </div>
+            <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+              <img src="./images/send-icon.png" alt="Send Icon" class="w-5">
+            </div>
+          </div>
+        </div> -->
+      </div>
+    
+      <a href="#" id="show-more-btn" class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[#fcf4ff] duration-500 hidden">
+        Show More <img src="./images/right-arrow-bold.png" alt="" class="w-4">
+      </a>
+    </div>
+
+    
+    
+    <!-- ---------------- Contact Us ------------------- -->
+
+    <style>
+      /* Section Styling */
+      #contact {
+        background-color: #f9f9f9;
+        padding: 60px 12%;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+    
+      /* Header Styling */
+      #contact h4 {
+        font-size: 1.25rem;
+        color: #4f46e5;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+    
+      #contact h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 20px;
+      }
+    
+      #contact p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+    
+      /* Input Fields */
+      #contact input,
+      #contact textarea {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        background-color: #fff;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+    
+      #contact input:focus,
+      #contact textarea:focus {
+        border-color: #4f46e5;
+        box-shadow: 0 0 8px rgba(79, 70, 229, 0.2);
+        outline: none;
+      }
+    
+      /* Button */
+      #contact button {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        background-color: #4f46e5;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        margin-top: 20px;
+      }
+    
+      #contact button:hover {
+        background-color: #6366f1;
+        transform: translateY(-2px);
+      }
+    
+      /* Responsive Grid */
+      .input-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    
+      @media (max-width: 768px) {
+        .input-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    
+      /* Textarea */
+      textarea {
+        resize: vertical;
+      }
+    </style>
+    
+    <div id="contact">
+      <h4 class="text-center">Contact Me</h4>
+      <h2 class="text-center" style="font-family:'Times New Roman', Times, serif">Get In Touch</h2>
+      <p class="text-center">
+        Have a question, project inquiry, or just want to say hello? I’d love to hear from you. Use the form below to send me a message!
+      </p>
+    
+      <form method="POST" action="https://api.web3forms.com/submit" class="max-w-3xl mx-auto">
+        <input type="hidden" name="access_key" value="c6c85856-ae96-4bfa-bb73-22713949e263">
+    
+        <!-- Input Fields -->
+        <div class="input-grid">
+          <input type="text" placeholder="Your Name" name="name" required>
+          <input type="email" placeholder="Your Email" name="email" required>
+        </div>
+    <br>
+        <!-- Message Box -->
+        <textarea rows="5" placeholder="Your Message" name="message" required></textarea>
+    
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit">
+            Submit Now
+          </button>
+        </div>
+      </form>
+    </div>
+    
+    
+
+    <!-- ------------------- Footer ---------------------- -->
+
+    <div class="mt-20">
+      <div class="text-center">
+        <img src="images/Logo/logo-2.png" alt="" class="w-36 mx-auto mb-2">
+        <div class="w-max flex items-center gap-2 mx-auto">
+          <img src="./images/mail_icon.png" alt="" class="w-6">
+          siddhesh.sonavane8600@gmail.com
+        </div>
+      </div>
+      <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+        <p>© 2025 Siddhesh Sonavane. All rights reserved.</p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+          <li>
+            <div class="tooltip">
+              <a href="https://www.instagram.com/siddhesh_sonavane2415/" target="_blank">
+                <img src="./images/—Pngtree—instagram icon instagram logo_3584852.png" alt="Instagram Logo" class="w-6">
+              </a>
+              <span class="tooltip-text">Instagram</span>
+            </div>
+          </li>
+          <li>
+            <div class="tooltip">
+              <a href="https://github.com/Sidh2003" target="_blank">
+                <img src="./images/github-logo.png" alt="GitHub Logo" class="w-6">
+              </a>
+              <span class="tooltip-text">GitHub</span>
+            </div>
+          </li>
+          <li>
+            <div class="tooltip">
+              <a href="https://www.linkedin.com/in/siddhesh-sonavane-9823b226a/" target="_blank">
+                <img src="./images/linkedin.png" alt="LinkedIn Logo" class="w-6">
+              </a>
+              <span class="tooltip-text">LinkedIn</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+<style>
+/* Tooltip container styling */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 120%; /* Position the tooltip above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Arrow below the tooltip */
+.tooltip .tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+</style>      
+    </div>
+    
+
+  <script src="./script.js"></script>
+</body>
+</html>
