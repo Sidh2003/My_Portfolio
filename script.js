@@ -13,13 +13,67 @@ function closeMenu() {
 }
 
 
-window.addEventListener('scroll',()=>{
-  if(scrollY >50){
-    navBar.classList.add('bg-white','bg-opacity-50','backdrop-blur-lg','shadow-sm')
-    navLinks.classList.remove('bg-white','shadow-sm','bg-opacity-50')
+window.addEventListener('scroll', () => {
+  if (scrollY > 50) {
+    navBar.classList.add('bg-white', 'bg-opacity-50', 'backdrop-blur-lg', 'shadow-sm')
+    navLinks.classList.remove('bg-white', 'shadow-sm', 'bg-opacity-50')
   }
-  else{
-    navBar.classList.remove('bg-white','bg-opacity-50','backdrop-blur-lg','shadow-sm')
-    navLinks.classList.add ('bg-white','shadow-sm','bg-opacity-50')
+  else {
+    navBar.classList.remove('bg-white', 'bg-opacity-50', 'backdrop-blur-lg', 'shadow-sm')
+    navLinks.classList.add('bg-white', 'shadow-sm', 'bg-opacity-50')
   }
+
+  //
+
+
 })
+
+
+// Check if the user has already submitted the form before
+let formSubmitted = localStorage.getItem("formSubmitted") === "true";
+
+// If form was submitted before, enable the download link
+if (formSubmitted) {
+  document.getElementById("downloadBtn").setAttribute("href", "./images/My resume.pdf");
+  document.getElementById("downloadBtn").setAttribute("download", "My resume.pdf");
+}
+
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent form from submitting normally
+
+  let formData = new FormData(this);
+
+  // Send form data to Web3Forms
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+  })
+    .then(response => response.json())
+    .then(result => {
+      if (result.success) {
+        alert("Form submitted successfully! You can now download the resume.");
+
+        // Store user data in localStorage
+        localStorage.setItem("userName", document.getElementById("name").value);
+        localStorage.setItem("userEmail", document.getElementById("email").value);
+        localStorage.setItem("userMessage", document.getElementById("message").value);
+        localStorage.setItem("formSubmitted", "true"); // Mark form as submitted
+
+        // Allow download
+        formSubmitted = true;
+        document.getElementById("downloadBtn").setAttribute("href", "./images/My resume.pdf");
+        document.getElementById("downloadBtn").setAttribute("download", "My resume.pdf");
+      } else {
+        alert("Form submission failed. Please try again.");
+      }
+    })
+    .catch(error => console.error("Error:", error));
+});
+
+// Prevent download before form submission
+document.getElementById("downloadBtn").addEventListener("click", function (event) {
+  if (!formSubmitted) {
+    event.preventDefault(); // Stop the default download action
+    alert("Please fill out the contact form before downloading the resume.");
+  }
+});
