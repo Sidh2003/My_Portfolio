@@ -30,7 +30,6 @@
      animation: slideFadeIn 2s ease-out;
  }
 
-
  /* Section Styling */
  #contact {
      background-color: #f9f9f9;
@@ -162,3 +161,11 @@
      visibility: visible;
      opacity: 1;
  }
+ /* top typing format */
+ .typing-container {
+    display: inline-block;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif; 
+    white-space: pre-wrap;
+    overflow: hidden;
+    font-size: 1.125rem; 
+  }
