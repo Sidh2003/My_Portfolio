@@ -41,7 +41,7 @@ let formSubmitted = localStorage.getItem("formSubmitted") === "true";
 if (formSubmitted) {
   document
     .getElementById("downloadBtn")
-    .setAttribute("href", "./images/My resume.pdf");
+    .setAttribute("href", "./images/My_Resume.pdf");
   document
     .getElementById("downloadBtn")
     .setAttribute("download", "My resume.pdf");
@@ -85,7 +85,7 @@ document
           formSubmitted = true;
           document
             .getElementById("downloadBtn")
-            .setAttribute("href", "./images/My resume.pdf");
+            .setAttribute("href", "./images/My_Resume.pdf");
           document
             .getElementById("downloadBtn")
             .setAttribute("download", "My resume.pdf");
