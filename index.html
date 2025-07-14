@@ -24,49 +24,48 @@
   </div>
 
   <!-- Navigation -->
-  <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+  <nav class="fixed top-0 left-0 w-full z-50 bg-white/60 backdrop-blur-lg shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Logo -->
-    <!-- <h1 class="w-50 cursor-pointer mr-14" id="logo1"><span></span>Siddhesh</h1> -->
-    <a href="#top" class="cursor-pointer mr-14">
-      <img src="images/Logo/Logo-1.png" alt="Logo" class="w-28">
+    <a href="#" class="flex items-center gap-2 text-xl font-bold text-purple-700">
+      <span class="text-2xl">{S}</span> IDDHESH<span class="text-gray-700">.</span>
     </a>
 
-    <!-- Desktop Menu -->
-    <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
-      <li><a href="#top" class="hover:text-rose-500">Home</a></li>
-      <li><a href="#about" class="hover:text-rose-500">About Me</a></li>
-      <li><a href="#services" class="hover:text-rose-500">Services</a></li>
-      <li><a href="#work" class="hover:text-rose-500">My Work</a></li>
-      <li><a href="#contact" class="hover:text-rose-500">Contact Us</a></li>
+    <!-- Navigation Links -->
+    <ul class="hidden md:flex space-x-8 text-gray-800 font-medium">
+      <li><a href="#home" class="hover:text-purple-700 transition">Home</a></li>
+      <li><a href="#about" class="hover:text-purple-700 transition">About Me</a></li>
+      <li><a href="#services" class="hover:text-purple-700 transition">Services</a></li>
+      <li><a href="#work" class="hover:text-purple-700 transition">My Work</a></li>
+      <li><a href="#contact" class="hover:text-purple-700 transition">Contact Us</a></li>
     </ul>
 
-    <!-- Mobile Actions -->
-    <div class="flex gap-4">
-      <button><a href="https://wa.me/918928678948" class="chat-btn" target="_blank"><img
-            src="./images/—Pngtree—whatsapp mobile software icon_8704828.png" alt="Toggle Theme"
-            class="w-6"></a></button>
-      <a href="#contact"
-        class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4">
-        Contact <img src="./images/arrow-icon.png" alt="" class="w-3">
-      </a>
-      <button class="block md:hidden ml-3" onclick="openMenu()">
-        <img src="./images/menu-black.png" alt="Menu" class="w-6">
-      </button>
-    </div>
+    <!-- Contact Button -->
+    <a href="#contact" class="hidden md:inline-flex items-center gap-2 px-5 py-2 border border-black rounded-full text-black font-medium hover:bg-purple-600 hover:text-white transition">
+      Contact <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+    </a>
 
-    <!-- Mobile Menu -->
-    <ul id="sideMenu"
-      class="flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 right-0 bottom-0 w-64 z-50 h-screen bg-rose-50">
-      <div class="absolute right-6 top-6" onclick="closeMenu()">
-        <img id="closeButton" src="./images/close-black.png" alt="Close" class="w-5 cursor-pointer">
-      </div>
-      <li class="mb-4"><a href="#top" class="text-gray-700 hover:text-rose-500">Home</a></li>
-      <li class="mb-4"><a href="#about" class="text-gray-700 hover:text-rose-500">About Me</a></li>
-      <li class="mb-4"><a href="#services" class="text-gray-700 hover:text-rose-500">Services</a></li>
-      <li class="mb-4"><a href="#work" class="text-gray-700 hover:text-rose-500">My Work</a></li>
-      <li><a href="#contact" class="text-gray-700 hover:text-rose-500">Contact Me</a></li>
-    </ul>
-  </nav>
+    <!-- Hamburger for Mobile -->
+    <button id="menuBtn" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden hidden flex-col items-center bg-white text-center py-4 space-y-4">
+    <a href="#home" class="block text-gray-700">Home</a>
+    <a href="#about" class="block text-gray-700">About Me</a>
+    <a href="#services" class="block text-gray-700">Services</a>
+    <a href="#work" class="block text-gray-700">My Work</a>
+    <a href="#contact" class="block text-gray-700">Contact Us</a>
+  </div>
+</nav>
+
+
+
+
 
   <!-- --------- header -------------- -->
 
@@ -433,7 +432,7 @@
       </div>
     </div>
     <div class="text-center mt-10">
-      <p class="text-gray-800 text-lg">For more projects, follow my GitHub account:</p><a
+      <p class="text-gray-800 text-lg">For more projects, follow my GitHub profile:</p><a
         href="https://github.com/Sidh2003" target="_blank" rel="noopener noreferrer"
         class="text-blue-500 hover:text-blue-700 flex items-center justify-center gap-2"><i
           class="fa-brands fa-github text-2xl"
@@ -515,6 +514,29 @@
       </ul>
     </div>
   </div>
+
+  <!-- WhatsApp Floating Button -->
+<!-- WhatsApp Floating Button with Tooltip -->
+<div class="fixed bottom-6 right-6 z-50 group">
+  <a 
+    href="https://wa.me/919999999999" 
+    target="_blank" 
+    aria-label="Chat on WhatsApp"
+    class="bg-[#00a336] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 duration-300"
+  >
+    <!-- WhatsApp SVG Icon -->
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 32 32">
+      <path d="M16.003 2.003c-7.732 0-14 6.27-14 14 0 2.47.646 4.883 1.877 7.012L2 30l7.178-1.85a13.922 13.922 0 006.825 1.753h.002c7.732 0 14-6.27 14-14s-6.268-14-14-14zm7.866 19.79c-.334.938-1.637 1.8-2.24 1.913-.574.109-1.302.156-2.095-.13-.484-.166-1.098-.354-1.896-.693-3.336-1.438-5.508-4.973-5.675-5.208-.166-.234-1.353-1.803-1.353-3.437s.857-2.438 1.164-2.77c.305-.33.662-.414.883-.414.219 0 .438.002.629.012.203.01.477-.078.746.567.334.79 1.09 2.727 1.187 2.927.094.195.152.43.03.664-.125.23-.188.375-.367.578-.18.203-.377.453-.54.609-.18.176-.367.367-.158.723.203.355.902 1.488 1.937 2.41 1.332 1.187 2.445 1.555 2.801 1.73.355.176.559.152.766-.09.207-.242.879-1.023 1.113-1.375.23-.352.461-.293.777-.176.312.121 1.977.933 2.316 1.102.34.172.566.254.648.398.078.141.078.82-.256 1.758z"/>
+    </svg>
+  </a>
+
+  <!-- Tooltip -->
+  <span class="absolute bottom-16 right-0 w-max bg-black text-white text-xs px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    Chat on WhatsApp
+  </span>
+</div>
+
+
 
 
   <script src="./script.js"></script>
