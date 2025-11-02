@@ -1,546 +1,1482 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
+<html lang="zxx">
+   
+<!-- Mirrored from html.designingmedia.com/folioflix/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Nov 2025 16:39:45 GMT -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Siddhesh</title>
-  <link rel="shortcut icon" href="./images/Logo/Web_logo.png" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="overflow-x-hidden font-Outfit leading-8 ">
-  <!-- Background Image -->
-  <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
-    <img src="./images/header-bg-color.png" alt="Header Background" class="w-full">
-  </div>
-
-  <!-- Navigation -->
-  <nav class="fixed top-0 left-0 w-full z-50 bg-white/60 backdrop-blur-lg shadow-sm">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <!-- Logo -->
-    <a href="#" class="flex items-center gap-2 text-xl font-bold text-purple-700">
-      <span class="text-2xl">{S}</span> IDDHESH<span class="text-gray-700">.</span>
-    </a>
-
-    <!-- Navigation Links -->
-    <ul class="hidden md:flex space-x-8 text-gray-800 font-medium">
-      <li><a href="#home" class="hover:text-purple-700 transition">Home</a></li>
-      <li><a href="#about" class="hover:text-purple-700 transition">About Me</a></li>
-      <li><a href="#services" class="hover:text-purple-700 transition">Services</a></li>
-      <li><a href="#work" class="hover:text-purple-700 transition">My Work</a></li>
-      <li><a href="#contact" class="hover:text-purple-700 transition">Contact Us</a></li>
-    </ul>
-
-    <!-- Contact Button -->
-    <a href="#contact" class="hidden md:inline-flex items-center gap-2 px-5 py-2 border border-black rounded-full text-black font-medium hover:bg-purple-600 hover:text-white transition">
-      Contact <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-    </a>
-
-    <!-- Hamburger for Mobile -->
-    <button id="menuBtn" class="md:hidden focus:outline-none">
-      <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="md:hidden hidden flex-col items-center bg-white text-center py-4 space-y-4">
-    <a href="#home" class="block text-gray-700">Home</a>
-    <a href="#about" class="block text-gray-700">About Me</a>
-    <a href="#services" class="block text-gray-700">Services</a>
-    <a href="#work" class="block text-gray-700">My Work</a>
-    <a href="#contact" class="block text-gray-700">Contact Us</a>
-  </div>
-</nav>
-
-
-
-
-
-  <!-- --------- header -------------- -->
-
-  <div class="w-11/12 max-w-3xl text-center
-    mx-auto h-screen flex flex-col items-center justify-center gap-4">
-    <img src="images/My_Pic.jpeg" alt="" class="rounded-full w-32">
-    <h3 class="flex items-center gap-2 text-xl md:text-2xl mb-3">Hii, I'm Siddhesh Sonavane <img
-        src="./images/hand-icon.png" alt="" class="w-6"></h3>
-    <h1 class="text-3xl sm:text-6xl lg:text-[60px] animate-slide-fade"
-      style="font-family:'Times New Roman', Times, serif">
-      Frontend Web Developer.
-    </h1>
-
-     <!-- the paragraph code in script.js file -->
-      <p class="max-w-2xl mx-auto">
-        <span class="typing-container" id="typewriter-text"></span>
-      </p>
-    
-
-    <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
-      <a href="#contact"
-        class="px-10 py-3 border border-transparent rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white text-lg font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-shadow duration-300">
-        Contact me
-        <img src="./images/right-arrow-white.png" alt="" class="w-4">
-      </a>
-      <a id="downloadBtn" href="#"
-        class="px-10 py-3 border border-transparent rounded-full border-gray-500 text-lg font-semibold flex items-center justify-center gap-2 bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
-        My Resume
-        <img src="./images/download-icon.png" alt="" class="w-4">
-      </a>
-    </div>
-
-  </div>
-
-  <!-- ------------ About Me ----------------- -->
-
-  <div id="about" class="w-full px-[12%] py-10 bg-gray-50 scroll-mt-15">
-    <h2 class="text-center text-5xl font-bold text-gray-800">About Me</h2>
-
-    <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
-      <!-- Image Section -->
-      <div class="max-w-max mx-auto relative">
-        <!-- Profile Image -->
-        <img src="./images/about-Photoroom.jpg" alt="Siddhesh Sonavane Profile Picture"
-          class="w-64 sm:w-80 rounded-lg shadow-lg">
-
-        <!-- Circular Design -->
-        <div class="w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/2 translate-y-1/2 
-                   shadow-[0_4px_55px_rgba(149,0,162,0.3)] flex items-center justify-center bg-transparent">
-          <!-- Circular Text -->
-          <img src="./images/circular-text.png" alt="Creative Circular Text Design" class="w-full slow-spin">
-          <!-- Developer Icon -->
-          <img src="./images/blogger.png" alt="Developer Icon in the Circular Design" class="w-1/4 absolute top-1/2 left-1/2 
-                 -translate-x-1/2 -translate-y-1/2">
-        </div>
-        <style>
-          @keyframes slowSpin {
-            0% {
-              transform: rotate(0deg);
-            }
-
-            100% {
-              transform: rotate(360deg);
-            }
-          }
-
-          .slow-spin {
-            animation: slowSpin 6s linear infinite;
-          }
-        </style>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" href="assets/css/animate.css">
+      <link rel="stylesheet" href="../../pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+      <link rel="stylesheet" href="assets/bootstarp/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/super-classes.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/mobile.css">
+      <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+      <title>Folio flix | Home</title>
+   </head>
+   <body>
+      <!---header-and-banner-section-->
+      <div class="header-and-banner-con w-100 float-left position-relative">
+         <div class="header-and-banner-inner-con">
+            <header class="main-header">
+               <!--navbar-start-->
+               <div class="container pl-0 pr-0">
+                  <div class="header-con">
+                     <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <a class="navbar-brand p-0" href="index.html">
+                        <img src="assets/image/logo-img.png" alt="logo-img" class="img-fluid">
+                        </a>
+                        <button class="navbar-toggler p-0 collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                           <ul class="navbar-nav ml-auto">
+                              <li class="nav-item active pl-0">
+                                 <a class="nav-link p-0 is-active" href="index.html">Home<span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link p-0" href="#service-con">Services</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link p-0" href="#about-con">About</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link p-0" href="#Portfolio">Portfolio</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link p-0" href="#testimonials">Testimonials</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link p-0" href="#blog">Blog</a>
+                              </li>
+                           </ul>
+                           <div class="d-inline-block contact">
+                              <a href="#Contact">Contact</a>
+                           </div>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+               <!--navbar-end-->
+            </header>
+            <section class="banner-main-con" id="home">
+               <div class="container pl-0 pr-0">
+                  <!--banner-start-->
+                  <div class="footer-social-icon banner-social-icon mb-0">
+                     <ul class="mb-0 list-unstyled">
+                        <li class="">
+                           <a href="https://www.behance.net/"><i class="fab fa-behance d-flex align-items-center justify-content-center"></i></a>
+                        </li>
+                        <li class="mt-3 mb-3">
+                           <a href="https://dribbble.com/"><i class="fab fa-dribbble d-flex align-items-center justify-content-center ml-0 mr-0 "></i></a>
+                        </li>
+                        <li class="">
+                           <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in d-flex align-items-center justify-content-center"></i></a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="banner-con text-lg-left text-center">
+                     <div class="row">
+                        <div class="col-lg-7 col-sm-12 d-flex justify-content-center flex-column">
+                           <div class="banner-left-con wow slideInLeft">
+                              <div class="banner-heading">
+                                 <h2>Hello, I Am</h2>                                 
+                                 <ul class="dynamic-txts">
+                                    <li><h1>Alina Parker</h1></li>
+                                    <li><h1>Alina Parker</h1></li>
+                                    <li><h1>Alina Parker</h1></li>
+                                    <li><h1>Alina Parker</h1></li>
+                                  </ul>
+                                 <p>Duis aute irure dolor in reprehenderit in voluptareu<br>
+                                    dolore eu fugiat nulla pariatur.
+                                 </p>
+                              </div>
+                              <div class="banner-btn generic-btn d-inline-block">
+                                 <a href="#Contact">Hire Me</a>
+                              </div>
+                              <a href="#Portfolio" class="See-btn">See My Work</a>
+                           </div>
+                        </div>
+                        <div class="col-lg-5 col-sm-12">
+                           <div class="banner-right-con position-relative wow slideInRight" id="banner-right-con">
+                              <figure class="mb-0">
+                                 <img src="assets/image/banner-right-img.png" alt="banner-right-img" id="banner-right-img">
+                              </figure>
+                              <div class="best-award-con d-inline-block wow bounceInUp" data-wow-duration="1s" data-wow-delay="1s">
+                                 <div class="best-award-inner-con">
+                                    <figure class="mb-0">
+                                       <img src="assets/image/cup-img.png" alt="cup-img" class="img-fluid">
+                                    </figure>
+                                    <div class="best-award-title">
+                                       <p class="mb-0">Best Design<br>
+                                          Award.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="best-award-con d-inline-block happy-con wow bounceInUp " data-wow-duration="1s" data-wow-delay="1s">
+                                 <div class="best-award-inner-con text-center">
+                                    <figure>
+                                       <img src="assets/image/admin-icon.png" alt="admin-icon" class="img-fluid">
+                                    </figure>
+                                    <div class="best-award-title d-inline-block ml-0">
+                                       <p class="mb-0 d-inline-block count">4</p>
+                                       <p class="mb-0 d-inline-block">k+</p>
+                                       <span class="d-block">Happy<br>
+                                       Customers</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="cursor"></div>
+                              <div class="cursor2"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!--banner-end-->
+               </div>
+            </section>
+         </div>
       </div>
+      <!---header-and-banner-section-->
+      <!-- service section -->
+      <section class="w-100 float-left service-con padding-top padding-bottom position-relative" id="service-con" >
+         <div class="container">
+            <div class="service-inner-con position-relative">
+               <div class="generic-title text-center">
+                  <h6>My Expertise</h6>
+                  <h2 class="mb-0">Provide Wide Range of<br>
+                     Digital Services
+                  </h2>
+               </div>
+               <div class="service-box wow fadeInUp">
+                  <div class="row">
+                     <div class="col-lg-6 col-md-6">
+                        <div class="service-box-item">
+                           <figure class="mb-0">
+                              <img src="assets/image/service-icon1.png" alt="service-icon" class="img-fluid">
+                           </figure>
+                           <div class="service-box-item-content">
+                              <h4>Ui/Ux Design</h4>
+                              <p>Dolor repellendus temporibus autem 
+                                 quibusdam officiis debitis rerum neces
+                                 aibus minima veniam.
+                              </p>
+                              <a href="#" data-toggle="modal" data-target="#Ui-Design">Read More</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-6 col-md-6">
+                        <div class="service-box-item">
+                           <figure class="mb-0">
+                              <img src="assets/image/service-icon2.png" alt="service-icon" class="img-fluid">
+                           </figure>
+                           <div class="service-box-item-content">
+                              <h4>Web Design</h4>
+                              <p>Dolor repellendus temporibus autem 
+                                 quibusdam officiis debitis rerum neces
+                                 aibus minima veniam.
+                              </p>
+                              <a href="#" data-toggle="modal" data-target="#web-design">Read More</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row mb-0">
+                     <div class="col-lg-6 col-md-6">
+                        <div class="service-box-item">
+                           <figure class="mb-0">
+                              <img src="assets/image/service-icon3.png" alt="service-icon" class="img-fluid">
+                           </figure>
+                           <div class="service-box-item-content">
+                              <h4>Web Development</h4>
+                              <p>Dolor repellendus temporibus autem 
+                                 quibusdam officiis debitis rerum neces
+                                 aibus minima veniam.
+                              </p>
+                              <a href="#" data-toggle="modal" data-target="#web-development">Read More</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-6 col-md-6">
+                        <div class="service-box-item mb-0">
+                           <figure class="mb-0">
+                              <img src="assets/image/service-icon4.png" alt="service-icon" class="img-fluid">
+                           </figure>
+                           <div class="service-box-item-content">
+                              <h4>App Development</h4>
+                              <p>Dolor repellendus temporibus autem 
+                                 quibusdam officiis debitis rerum neces
+                                 aibus minima veniam.
+                              </p>
+                              <a href="#" data-toggle="modal" data-target="#app-development">Read More</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- service section -->
+      <!-- skill section -->
+      <section class="w-100 float-left skill-con padding-top padding-bottom position-relative" id="about-con">
+         <div class="container">
+            <div class="skill-inner-con position-relative">
+               <div class="row">
+                  <div class="col-lg-6 order-lg-0 order-2">
+                     <div class="skill-left-con text-center wow slideInLeft" >
+                        <div class="row service-skill-sttaf-con">
+                           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                              <div class="skill-left-item-con">
+                                 <div class="circle-wrap firstPercentage">
+                                    <div class="circle">
+                                       <div class="mask full">
+                                          <div class="fill"></div>
+                                       </div>
+                                       <div class="mask half">
+                                          <div class="fill"></div>
+                                       </div>
+                                       <div class="inside-circle">
+                                          <div class="service-skill-sttaf-item-con">
+                                             <div class="service-skill-sttaf-item-title service-skill-sttaf-item1-con d-flex align-items-center justify-content-center">
+                                                <h4 class="d-table-cell align-middle mb-0 text-center count">75</h4>
+                                                <span class="static-txt2">%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="service-skill-sttaf-item-heading">
+                                    <p class="mb-0">Graphic Design</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                              <div class="skill-left-item-con">
+                                 <div class="circle-wrap secondPercentage">
+                                    <div class="circle">
+                                       <div class="mask full">
+                                          <div class="fill"></div>
+                                       </div>
+                                       <div class="mask half">
+                                          <div class="fill"></div>
+                                       </div>
+                                       <div class="inside-circle">
+                                          <div class="service-skill-sttaf-item-con">
+                                             <div class="service-skill-sttaf-item-title service-skill-sttaf-item2-con text-center d-flex align-items-center justify-content-center">
+                                                <h4 class=" mb-0 text-center count">95</h4>
+                                                <span class=" static-txt2">%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="service-skill-sttaf-item-heading">
+                                    <p class="mb-0">Web Designing</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row service-skill-sttaf-con">
+                           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                              <div class="skill-left-item-con">
+                                 <div class="circle-wrap thirdPercentage">
+                                    <div class="circle">
+                                       <div class="mask full">
+                                          <div class="fill"></div>
+                                       </div>
+                                       <div class="mask half">
+                                          <div class="fill"></div>
+                                       </div>
+                                       <div class="inside-circle">
+                                          <div class="service-skill-sttaf-item-con">
+                                             <div class="service-skill-sttaf-item-title service-skill-sttaf-item1-con d-flex align-items-center justify-content-center">
+                                                <h4 class="d-table-cell align-middle mb-0 text-center count">85</h4>
+                                                <span class="static-txt2">%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="service-skill-sttaf-item-heading">
+                                    <p class="mb-0">Branding Design</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-6 col-12 ">
+                              <div class="skill-left-item-con">
+                                 <div class="circle-wrap fourPercentage">
+                                    <div class="circle">
+                                       <div class="mask full">
+                                          <div class="fill"></div>
+                                       </div>
+                                       <div class="mask half">
+                                          <div class="fill"></div>
+                                       </div>
+                                       <div class="inside-circle">
+                                          <div class="service-skill-sttaf-item-con">
+                                             <div class="service-skill-sttaf-item-title service-skill-sttaf-item2-con text-center d-flex align-items-center justify-content-center">
+                                                <h4 class=" mb-0 text-center count">80</h4>
+                                                <span class=" static-txt2">%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="service-skill-sttaf-item-heading">
+                                    <p class="mb-0">Web Development</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-6 d-flex align-items-center">
+                     <div class="skill-right-con wow slideInRight" >
+                        <h6>My Skills</h6>
+                        <h2>Beautiful & Unique
+                           Digital Experiences
+                        </h2>
+                        <p>Nostrum exercitationem ullam corporis suscipit laborioa
+                           nisi ut aliquid exrea commodi consequatur magni dolores 
+                           aos qui ratione voluptatem nesciunt.
+                        </p>
+                        <p>Quia voluptas sit aspernatur aut odit aut fugit, sed ruiano
+                           consequntar magni dolores.
+                        </p>
+                        <div class="generic-btn download-bnt">
+                           <a href="#" id="downloadImg" onclick="downloadImage()">Download CV</a>                  
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- skill section -->
+      <!-- portfolio section -->
+      <section class="w-100 float-left portfolio-con padding-top" id="Portfolio">
+         <div class="container">
+            <div class="generic-title text-center">
+               <h6 class="text-white">Creative Works</h6>
+               <h2 class="mb-0 text-white">Check My Portfolio</h2>
+            </div>
+            <div id="myBtnContainer" class="text-center">
+               <button class=" active active_button" onclick="filterSelection('all')"> All </button>
+               <button class="" onclick="filterSelection('cars')">Products </button>
+               <button class="" onclick="filterSelection('animals')">Web App</button>
+               <button class="" onclick="filterSelection('fruits')"> Inetraction </button>
+               <button class="" onclick="filterSelection('colors')">Brand Identity</button>
+            </div>
+         </div>
+      </section>
+      <!-- portfolio section -->
+      <!-- portfolio section -->
+      <section class="w-100 float-left portfolio-body-con">
+         <div class="container">
+            <div class="portfolio-img-con position-relative w-100 float-left wow fadeInUp" >
+               <div class="filterDiv cars position-relative">
+                  <a href="#" data-toggle="modal" data-target="#modalWPWAF">
+                     <div class="portfolio-img position-relative">
+                        <figure>
+                           <img src="assets/image/portfolio-img1.png" alt="portfolio-img1" class="img-fluid"> 
+                        </figure>
+                     </div>
+                  </a>
+                     <div class="portfolio-img-content text-left">
+                        <div class="portfolio-img-title d-inline-block">
+                           <h4>Application UI Design</h4>
+                           <p>Dolar repellendus temporibus...</p>
+                        </div>
+                     <a href="#" class="float-lg-right" data-toggle="modal" data-target="#modalWPWAF-icon">
+                      <i class="fas fa-arrow-right d-flex align-items-center justify-content-center"></i>
+                  </a> 
+                  </div>
+                  
+               </div>
+               <div class="filterDiv colors fruits position-relative">
+                  <a href="#" data-toggle="modal" data-target="#modalporfolio2">
+                     <div class="portfolio-img position-relative">
+                        <figure>
+                           <img src="assets/image/portfolio-img2.png" alt="portfolio-img1" class="img-fluid"> 
+                        </figure>
+                     </div>
+                  </a>
+                     <div class="portfolio-img-content text-left">
+                        <div class="portfolio-img-title d-inline-block">
+                           <h4 >Furni furniture UI Design</h4>
+                           <p >Dolar repellendus temporibus...</p>
+                        </div>
+                     <a href="#" class="float-lg-right" data-toggle="modal" data-target="#modalporfolio2-icon">
+                     <i class="fas fa-arrow-right d-flex align-items-center justify-content-center"></i>
+                     </a>
+                  </div>
+                  
+               </div>
+               <div class="filterDiv cars position-relative">
+                  <a href="#" data-toggle="modal" data-target="#modalporfolio3">
+                     <div class="portfolio-img position-relative">
+                        <figure>
+                           <img src="assets/image/portfolio-img3.png" alt="portfolio-img1" class="img-fluid"> 
+                        </figure>
+                     </div>
+                  </a>
+                     <div class="portfolio-img-content text-left">
+                        <div class="portfolio-img-title d-inline-block">
+                           <h4 >Mobile UI Design</h4>
+                           <p >Dolar repellendus temporibus...</p>
+                        </div>
+                  <a href="#" class="float-lg-right" data-toggle="modal" data-target="#modalporfolio3-icon"><i class="fas fa-arrow-right d-flex align-items-center justify-content-center"></i></a>
+                  </div>
+                 
+               </div>
+               <div class="filterDiv colors position-relative">
+                  <a href="#" data-toggle="modal" data-target="#modalporfolio4">
+                     <div class="portfolio-img position-relative">
+                        <figure>
+                           <img src="assets/image/portfolio-img4.png" alt="portfolio-img1" class="img-fluid"> 
+                        </figure>
+                     </div>
+                  </a>
+                     <div class="portfolio-img-content text-left">
+                        <div class="portfolio-img-title d-inline-block">
+                           <h4 >Businesscard UI Design</h4>
+                           <p >Dolar repellendus temporibus...</p>
+                        </div>
+                  <a href="#" class="float-lg-right" data-toggle="modal" data-target="#modalporfolio4-icon"><i class="fas fa-arrow-right d-flex align-items-center justify-content-center"></i></a>
+                  </div>
+                  
+               </div>
+               <div class="filterDiv cars animals position-relative">
+                  <a href="#" data-toggle="modal" data-target="#modalporfolio5">
+                     <div class="portfolio-img position-relative">
+                        <figure>
+                           <img src="assets/image/portfolio-img5.png" alt="portfolio-img1" class="img-fluid"> 
+                        </figure>
+                     </div>
+                  </a>
+                     <div class="portfolio-img-content text-left">
+                        <div class="portfolio-img-title d-inline-block">
+                           <h4 >Real estate UI Design</h4>
+                           <p >Dolar repellendus temporibus...</p>
+                        </div>
+                  <a href="#" class="float-lg-right" data-toggle="modal" data-target="#modalporfolio5-icon"><i class="fas fa-arrow-right d-flex align-items-center justify-content-center"></i></a>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- portfolio section -->
+      <!-- tastimonials section -->
+      <section class="w-100 float-left padding-top padding-bottom tastimonials-con position-relative text-lg-left text-center" id="testimonials">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-5">
+                  <div class="tastimonials-left-con wow slideInLeft" >
+                     <figure class="mb-0">
+                        <img src="assets/image/tastimonials-img.png" alt="tastimonials-img" class="img-fluid">
+                     </figure>
+                  </div>
+               </div>
+               <div class="col-lg-7">
+                  <div id="carouselExampleControls" class="carousel slide wow slideInRight" data-ride="carousel" >
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="testimonials-content">
+                              <h6>Testimonials</h6>
+                              <h2>Happy Clients Feedback</h2>
+                              <figure class="mb-0">
+                                 <img src="assets/image/comma-icon.png" alt="comma-icon" class="img-fluid">
+                              </figure>
+                              <div class="testimonials-inner-content">
+                                 <p>Quisruam est, qui dolorem ipsum quia dolor sit amet, consecteaur
+                                    aeci velit, sed quia non numquam eius modi tempora incidunt ut lao
+                                    magnam aliquam quaerat voluptatem reprehenderit in voluptate
+                                    cillum dolore eu fugiat nulla pariatur maxime...
+                                 </p>
+                                 <span class="d-block auther-name">Kevin Andrew</span>
+                                 <span class="d-block">CEO  of the company</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="testimonials-content">
+                              <h6>Testimonials</h6>
+                              <h2>Happy Clients Feedback</h2>
+                              <figure class="mb-0">
+                                 <img src="assets/image/comma-icon.png" alt="comma-icon" class="img-fluid">
+                              </figure>
+                              <div class="testimonials-inner-content">
+                                 <p>Quisruam est, qui dolorem ipsum quia dolor sit amet, consecteaur
+                                    aeci velit, sed quia non numquam eius modi tempora incidunt ut lao
+                                    magnam aliquam quaerat voluptatem reprehenderit in voluptate
+                                    cillum dolore eu fugiat nulla pariatur maxime...
+                                 </p>
+                                 <span class="d-block auther-name">Kevin Andrew</span>
+                                 <span class="d-block">CEO  of the company</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="testimonials-content">
+                              <h6>Testimonials</h6>
+                              <h2>Happy Clients Feedback</h2>
+                              <figure class="mb-0">
+                                 <img src="assets/image/comma-icon.png" alt="comma-icon" class="img-fluid">
+                              </figure>
+                              <div class="testimonials-inner-content">
+                                 <p>Quisruam est, qui dolorem ipsum quia dolor sit amet, consecteaur
+                                    aeci velit, sed quia non numquam eius modi tempora incidunt ut lao
+                                    magnam aliquam quaerat voluptatem reprehenderit in voluptate
+                                    cillum dolore eu fugiat nulla pariatur maxime...
+                                 </p>
+                                 <span class="d-block auther-name">Kevin Andrew</span>
+                                 <span class="d-block">CEO  of the company</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                     <i class="fas fa-arrow-left d-flex align-items-center justify-content-center"></i>
+                     <span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                     <i class="fas fa-arrow-right d-flex align-items-center justify-content-center"></i>
+                     <span class="sr-only">Next</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- tastimonials section -->
+      <!-- blog section -->
+      <section class="w-100 float-left blog-con padding-top padding-bottom position-relative" id="blog">
+         <div class="container">
+            <div class="blog-inner-con position-relative">
+               <div class="generic-title text-center">
+                  <h6>Latest News</h6>
+                  <h2 class="mb-0">Blog & Articles</h2>
+               </div>
+               <div class="blog-box wow fadeInUp" >
+                  <div class="row">
+                     <div class="col-lg-4">
+                        <div class="blog-box-item">
+                           <div class="blog-img">
+                              <a href="#" data-toggle="modal" data-target="#blog-model-1">
+                                 <figure class="mb-0">
+                                    <img src="assets/image/blog-img-1.png" alt="blog-img" class="img-fluid">
+                                 </figure>
+                              </a>
+                           </div>
+                           <div class="blog-content">
+                              <div class="blog-auteher-title">
+                                 <span>By David William</span>
+                                 <span class="float-lg-right">Mar 8, 2022</span>
+                              </div>
+                              <a href="#" data-toggle="modal" data-target="#blog-model-1">
+                                 <h4>Quis autem vea eum 
+                                    iure reprehenderit
+                                 </h4>
+                              </a>
+                              <p>Dolor repellendus temporibus autem 
+                                 quibusdam officiis debitis rerum nece
+                                 aibus minima veniam.
+                              </p>
+                              <a href="#" data-toggle="modal" data-target="#blog-model-1">Read More</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4">
+                        <div class="blog-box-item">
+                           <div class="blog-img">
+                              <a href="#" data-toggle="modal" data-target="#blog-model-2">
+                                 <figure class="mb-0">
+                                    <img src="assets/image/blog-img-2.png" alt="blog-img" class="img-fluid">
+                                 </figure>
+                              </a>
+                           </div>
+                           <div class="blog-content">
+                              <div class="blog-auteher-title">
+                                 <span>By John Doe</span>
+                                 <span class="float-lg-right">Mar 9, 2022</span>
+                              </div>
+                              <a href="#" data-toggle="modal" data-target="#blog-model-2">
+                                 <h4>Reprehenderit in vouta
+                                    velit esse cillum
+                                 </h4>
+                              </a>
+                              <p>Dolor repellendus temporibus autem 
+                                 quibusdam officiis debitis rerum nece
+                                 aibus minima veniam.
+                              </p>
+                              <a href="#" data-toggle="modal" data-target="#blog-model-2">Read More</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4">
+                        <div class="blog-box-item mb-0">
+                           <div class="blog-img">
+                              <a href="#" data-toggle="modal" data-target="#blog-model-3">
+                                 <figure class="mb-0">
+                                    <img src="assets/image/blog-img-3.png" alt="blog-img" class="img-fluid">
+                                 </figure>
+                              </a>
+                           </div>
+                           <div class="blog-content">
+                              <div class="blog-auteher-title">
+                                 <span>By Elina Parker</span>
+                                 <span class="float-lg-right">Mar 10, 2022</span>
+                              </div>
+                              <a href="#" data-toggle="modal" data-target="#blog-model-3">
+                                 <h4>Soluta nobis ose aligen
+                                 optio cumue
+                              </h4>
+                              </a>
+                              <p>Dolor repellendus temporibus autem 
+                                 quibusdam officiis debitis rerum nece
+                                 aibus minima veniam.
+                              </p>
+                              <a href="#" data-toggle="modal" data-target="#blog-model-3">Read More</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- blog section -->
+      <!-- form section -->
+      <section class="w-100 float-left form-main-con padding-top padding-bottom" id="Contact">
+         <div class="container">
+            <div class="form-main-inner-con position-relative">
+               <div class="generic-title text-center">
+                  <h6>Get in Touch</h6>
+                  <h2 class="mb-0">Any Questions? Feel Free<br>
+                     to Contact
+                  </h2>
+               </div>
+               <div class="row">
+                  <div class="col-lg-4 order-lg-0 order-2">
+                     <div class="contact-information position-relative wow slideInLeft" >
+                        <ul class="list-unstyled">
+                           <li>
+                              <figure class="mb-0 d-flex align-items-center justify-content-center">
+                                 <img src="assets/image/location-icon.png" alt="location-icon" class="img-fluid">
+                              </figure>
+                              <div class="contact-information-content">
+                                 <h5>Address:</h5>
+                                 <p class="mb-0">121 King Street Melbourne,
+                                    3000, Australia
+                                 </p>
+                              </div>
+                           </li>
+                           <li>
+                              <figure class="mb-0 d-flex align-items-center justify-content-center">
+                                 <img src="assets/image/message-icon.png" alt="message-icon" class="img-fluid">
+                              </figure>
+                              <div class="contact-information-content">
+                                 <h5>Email:</h5>
+                                 <p class="mb-0">Info@folioflix.com</p>
+                                 <p class="mb-0">folioflix@gmail.com</p>
+                              </div>
+                           </li>
+                           <li class="mb-0">
+                              <figure class="mb-0 d-flex align-items-center justify-content-center">
+                                 <img src="assets/image/phone-icon.png" alt="phone-icon" class="img-fluid">
+                              </figure>
+                              <div class="contact-information-content">
+                                 <h5>Phone:</h5>
+                                 <p class="mb-0">+61 3 8376 6284</p>
+                                 <p class="mb-0">+800 2345 6789</p>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-8">
+                      
+                      <div id="form_result">
+                
+                      </div>
 
-      <!-- Content Section -->
-      <div class="flex-1">
-        <p class="mb-10 max-w-2xl text-gray-700 leading-relaxed">
-          Hi, I'm Siddhesh Sonavane, a passionate web developer with expertise in creating dynamic and responsive web
-          applications.
-          I have a B.Sc. in Information Technology (2023) and am currently pursuing my MCA. Over the years, I've honed
-          my skills in
-          technologies like HTML, CSS, JavaScript, Laravel, and PHP, enabling me to build robust and user-friendly
-          solutions.
-        </p>
-
-        <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
-          <!-- Skill Card -->
-          <li class="border border-gray-300 rounded-xl p-6 shadow-sm transition-shadow duration-300 
-                       cursor-pointer hover:bg-[#fcf4ff] transform hover:-translate-y-1 hover:shadow-[4px_4px_0_#000]">
-            <img src="./images/coding.png" alt="Code Icon Representing Programming Skills" class="w-10 mx-auto mb-4">
-            <h3 class="text-center font-semibold text-gray-800">Languages</h3>
-            <p class="text-center text-gray-600 text-sm mt-2">
-              HTML, CSS, JavaScript, Laravel, PHP
-            </p>
-          </li>
-          <li class="border border-gray-300 rounded-xl p-6 shadow-sm transition-shadow duration-300 
-                       cursor-pointer hover:bg-[#fcf4ff] transform hover:-translate-y-1 hover:shadow-[4px_4px_0_#000]">
-            <img src="./images/online-learning.png" alt="Education Icon" class="w-10 mx-auto mb-4">
-            <h3 class="text-center font-semibold text-gray-800">Education</h3>
-            <p class="text-center text-gray-600 text-sm mt-2">
-              B.Sc. in IT (2023)<br>MCA Pursuing
-            </p>
-          </li>
-          <li class="border border-gray-300 rounded-xl p-6 shadow-sm transition-shadow duration-300 
-                       cursor-pointer hover:bg-[#fcf4ff] transform hover:-translate-y-1 hover:shadow-[4px_4px_0_#000]">
-            <img src="./images/hackathon.png" alt="Project Icon Representing Work Experience" class="w-10 mx-auto mb-4">
-            <h3 class="text-center font-semibold text-gray-800">Projects</h3>
-            <p class="text-center text-gray-600 text-sm mt-2">
-              Built 50+ Projects (Web Apps, Portfolios, E-Commerce)
-            </p>
-          </li>
-        </ul>
-
-        <div class="mt-14">
-          <!-- Section Heading -->
-          <h4 class="my-10 text-gray-700 text-xl font-bold text-center tracking-wide"
-            style="font-family:'Times New Roman', Times, serif">Technologies & Tools I Work With</h4>
-
-
-          <!-- Tools List -->
-          <ul class="flex flex-wrap items-center gap-5 sm:gap-7 justify-center">
-            <li class="w-14 aspect-square relative group">
-              <button class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
-                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
-                aria-label="HTML">
-                <img src="./images/html.png" alt="HTML Logo" class="w-8">
-              </button>
-              <!-- Tooltip -->
-              <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
-                         group-hover:opacity-100 transition-opacity duration-300">
-                HTML
-              </span>
-            </li>
-
-            <li class="w-14 aspect-square relative group">
-              <button class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
-                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
-                aria-label="CSS">
-                <img src="./images/css-3.png" alt="CSS Logo" class="w-8">
-              </button>
-              <!-- Tooltip -->
-              <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
-                         group-hover:opacity-100 transition-opacity duration-300">
-                CSS
-              </span>
-            </li>
-
-            <li class="w-14 aspect-square relative group">
-              <button class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
-                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
-                aria-label="JavaScript">
-                <img src="./images/js.png" alt="JavaScript Logo" class="w-8">
-              </button>
-              <!-- Tooltip -->
-              <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
-                         group-hover:opacity-100 transition-opacity duration-300">
-                JavaScript
-              </span>
-            </li>
-
-            <li class="w-14 aspect-square relative group">
-              <button class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
-                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
-                aria-label="JavaScript">
-                <img src="./images/sql-server.png" alt="Sql" class="w-8">
-              </button>
-              <!-- Tooltip -->
-              <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
-                         group-hover:opacity-100 transition-opacity duration-300">
-                Sql
-              </span>
-            </li>
-
-            <li class="w-14 aspect-square relative group">
-              <button class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
-                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
-                aria-label="JavaScript">
-                <img src="./images/php.png" alt="php" class="w-8">
-              </button>
-              <!-- Tooltip -->
-              <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
-                         group-hover:opacity-100 transition-opacity duration-300">
-                Php
-              </span>
-            </li>
-
-            <li class="w-14 aspect-square relative group">
-              <button class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
-                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
-                aria-label="JavaScript">
-                <img src="./images/laravel.png" alt="Laravel" class="w-8">
-              </button>
-              <!-- Tooltip -->
-              <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
-                         group-hover:opacity-100 transition-opacity duration-300">
-                Laravel
-              </span>
-            </li>
-
-            <li class="w-14 aspect-square relative group">
-              <button class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
-                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
-                aria-label="JavaScript">
-                <img src="./images/figma.png" alt="figma" class="w-8">
-              </button>
-              <!-- Tooltip -->
-              <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
-                         group-hover:opacity-100 transition-opacity duration-300">
-                figma
-              </span>
-            </li>
-
-            <li class="w-14 aspect-square relative group">
-              <button class="flex items-center justify-center w-full h-full border border-gray-300 rounded-lg 
-                         cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-300"
-                aria-label="JavaScript">
-                <img src="./images/git.png" alt="Git" class="w-8">
-              </button>
-              <!-- Tooltip -->
-              <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 
-                         group-hover:opacity-100 transition-opacity duration-300">
-                Git
-              </span>
-            </li>
-
-
-            <!-- Repeat for other items -->
-          </ul>
-
-        </div>
+                      
+                     <form id= "contactpage" method="POST" class="contact-form wow slideInRight text-lg-left text-center" >
+                        <div class="row">
+                           <div class="col-lg-6 col-md-6">
+                              <div class="form-group mb-0">    
+                                 <input type="text"  placeholder="Name"      name="name" id="name" autocomplete="off" required> 
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6">
+                              <div class="form-group mb-0">
+                                 <input type="email" id="emailHelp" name="emailHelp" placeholder="Email" autocomplete="off" required>
+                                 <small class="form-text text-muted"></small>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6">
+                              <div class="form-group mb-0">    
+                                 <input type="tel"  placeholder="Phone" name="phone" id="phone" required> 
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6">
+                              <div class="form-group mb-0">    
+                                 <input type="text" name="subject"  placeholder="Subject" id="subject"> 
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-lg-12">
+                              <div class=" form-group mb-0">    
+                                 <textarea  placeholder="Message" rows="3" name="comments" id="comments"></textarea>
+                              </div>
+                           </div>
+                        </div>
+                        <button type="submit" id="submit" class="appointment-btn">Submit</button>
+                     </form>
+                      
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- form section -->
+      <!-- weight footer section -->
+      <div class="w-100 float-left weight-footer-con position-relative">
+         <div class="container">
+            <div class="weight-footer-content text-center wow fadeInUp" >
+               <figure class="">
+                  <img src="assets/image/footer-logo.png" alt="footer-logo" class="img-fluid">
+               </figure>
+               <div class="footer-navbar">
+                  <ul class="list-unstyled">
+                     <li class="d-inline-block border-left-0 pl-0"><a href="#home">Home</a></li>
+                     <li class="d-inline-block"><a href="#about-con">About</a></li>
+                     <li class="d-inline-block"><a href="#service-con">Services</a></li>
+                     <li class="d-inline-block"><a href="#Portfolio">Portfolio</a></li>
+                     <li class="d-inline-block"><a href="#testimonials">Blog</a></li>
+                     <li class="d-inline-block pr-0"><a href="#Contact">Contact</a></li>
+                  </ul>
+               </div>
+               <div class="footer-social-icon">
+                  <ul class="mb-0">
+                     <li class="d-inline-block">
+                        <a href="https://www.behance.net/"><i class="fab fa-behance d-flex align-items-center justify-content-center"></i></a>
+                     </li>
+                     <li class="d-inline-block">
+                        <a href="https://dribbble.com/"><i class="fab fa-dribbble d-flex align-items-center justify-content-center"></i></a>
+                     </li>
+                     <li class="d-inline-block">
+                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in d-flex align-items-center justify-content-center"></i></a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="copy-right-content text-center">
+               <p class="mb-0">Copyright 2022 FolioFlix.com | All Rights Reserved.</p>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- ------------------ Services --------------------- -->
-
-  <div id="services" class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-10 scroll-mt-20 overflow-x-hidden">
-    <h4 class="text-center mb-2 text-lg">What I Offer</h4>
-    <h2 class="text-center text-5xl font-bold text-gray-800" style="font-family:'Times New Roman', Times, serif">My
-      Services</h2>
-    <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
-      I specialize in delivering high-quality digital solutions tailored to meet your business goals. With expertise in
-      modern technologies and a user-focused approach, I ensure that every project I undertake adds value and drives
-      success.
-    </p>
-
-    <div class="grid grid-cols-auto sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
-      <!-- Web Design -->
-      <div
-        class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
-        <img src="./images/mobile.png" alt="Web Design Icon" class="w-10">
-        <h3 class="text-lg my-4 text-gray-700">Responsive Website Development</h3>
-        <p class="text-sm text-gray-600 leading-5">Designing and developing responsive and visually appealing websites
-          that look great on all devices (mobile, tablet, and desktop).</p>
-
+      <a id="button"></a>
+      <div id="modalWPWAF" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/portfolio-model-img1.html" alt="portfolio-model-img1" class="img-fluid">
+                  </figure>
+                  <h4>Application UI Design</h4>
+                  <p class="mb-md-4 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release .</p>
+                  <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
       </div>
-
-      <!-- Mobile App -->
-      <div
-        class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
-        <img src="./images/data.png" alt="Mobile App Icon" class="w-10">
-        <h3 class="text-lg my-4 text-gray-700">Backend Development with Laravel</h3>
-        <p class="text-sm text-gray-600 leading-5">Developing robust and secure backend systems for websites and
-          applications using Laravel, including database management and API integrations.
-        </p>
-
+      <div id="modalWPWAF-icon" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/portfolio-model-img1.html" alt="portfolio-model-img1" class="img-fluid">
+                  </figure>
+                  <h4>Application UI Design</h4>
+                  <p class="mb-md-4 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release .</p>
+                  <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
       </div>
-
-      <!-- UI/UX Design -->
-      <div
-        class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
-        <img src="./images/ui.png" alt="UI/UX Design Icon" class="w-10">
-        <h3 class="text-lg my-4 text-gray-700">UI/UX Design</h3>
-        <p class="text-sm text-gray-600 leading-5">Creating visually appealing and user-centered designs using Figma to
-          enhance the user experience of websites and web applications.</p>
-
+      <div id="modalporfolio2" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/portfolio-model-img2.html" alt="portfolio-model-img1" class="img-fluid">
+                  </figure>
+                  <h4>Furni furniture UI Design</h4>
+                  <p class="mb-md-4 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release .</p>
+                  <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
       </div>
-
-      <!-- Graphics Design -->
-      <div
-        class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
-        <img src="./images/database-storage.png" alt="Graphics Design Icon" class="w-10">
-        <h3 class="text-lg my-4 text-gray-700">Backend Development with Database Management</h3>
-        <p class="text-sm text-gray-600 leading-5">Creating robust backend systems using Laravel with SQL databases to
-          handle user authentication, CRUD operations, and data relationships.</p>
-
+      <div id="modalporfolio2-icon" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/portfolio-model-img2.html" alt="portfolio-model-img1" class="img-fluid">
+                  </figure>
+                  <h4>Furni furniture UI Design</h4>
+                  <p class="mb-md-4 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release .</p>
+                  <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
-
-
-  <!-- -------------------- My Work -------------------- -->
-
-  <div id="work" class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-10 scroll-mt-20 overflow-hidden">
-    <h4 class="text-center mb-2 text-lg">My Portfolio</h4>
-    <h2 class="text-center text-5xl font-bold text-gray-800" style="font-family:'Times New Roman', Times, serif">My
-      Latest Work</h2>
-    <p class="text-center max-w-2xl mx-auto mt-5 mb-12">Explore some of the projects I have worked on, ranging from
-      responsive website design to dynamic backend development and creative UI/UX solutions. Each project showcases my
-      dedication to quality, innovation, and user-centered design.</p>
-    <div id="project-cards" class="grid grid-cols-auto sm:grid-cols-2 lg:grid-cols-4 my-10 gap-5">
-      <!-- 1 -->
-      <div
-        class="aspect-square bg-[url('./images/QR.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
-        <div
-          class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-          <div><a href="https://sidh2003.github.io/QRGenerator/" target="_blank" rel="noopener noreferrer">
-              <p class="text-sm text-gray-700">QR Code Generator</p>
-            </a></div>
-          <div
-            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition relative">
-            <a href="https://sidh2003.github.io/QRGenerator/" target="_blank" rel="noopener noreferrer"><img
-                src="./images/send-icon.png" alt="Send Icon" class="w-5"></a>
-          </div>
-        </div>
+      <div id="modalporfolio3" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/portfolio-model-img3.html" alt="portfolio-model-img1" class="img-fluid">
+                  </figure>
+                  <h4>Mobile UI Design</h4>
+                  <p class="mb-md-4 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release .</p>
+                  <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
       </div>
-
-  <!-- 2 -->
-      <div
-        class="aspect-square bg-[url('./images/robot-handshake-human-background-futuristic-digital-age.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
-        <div
-          class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-          <div><a href="https://sidh2003.github.io/SIDBoT/" target="_blank" rel="noopener noreferrer">
-              <p class="text-sm text-gray-700">Robot Voice Assistant</p>
-            </a></div>
-          <div
-            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition relative">
-            <a href="https://sidh2003.github.io/SIDBoT/" target="_blank" rel="noopener noreferrer"><img
-                src="./images/send-icon.png" alt="Send Icon" class="w-5"></a>
-          </div>
-        </div>
+      <div id="modalporfolio3-icon" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/portfolio-model-img3.html" alt="portfolio-model-img1" class="img-fluid">
+                  </figure>
+                  <h4>Mobile UI Design</h4>
+                  <p class="mb-md-4 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release .</p>
+                  <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
       </div>
-
-        <!-- 3 -->
-
-      <div
-        class="aspect-square bg-[url('./images/CRUD.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
-        <div
-          class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-          <div><a href="https://github.com/Sidh2003/laravel-CRUD/tree/master" target="_blank" rel="noopener noreferrer">
-              <p class="text-sm text-gray-700">Laravel Employee Management System</p>
-            </a></div>
-          <div
-            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-            <a href="https://github.com/Sidh2003/laravel-CRUD/tree/master" target="_blank"
-              rel="noopener noreferrer"><img src="./images/send-icon.png" alt="Send Icon" class="w-5"></a>
-          </div>
-        </div>
+      <div id="modalporfolio4" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/portfolio-model-img4.html" alt="portfolio-model-img1" class="img-fluid">
+                  </figure>
+                  <h4>Businesscard UI Design</h4>
+                  <p class="mb-md-4 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release .</p>
+                  <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
       </div>
-
-  <!-- 4 -->
-
-      <div
-        class="aspect-square bg-[url('./images/snake.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
-        <div
-          class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-          <div><a href="https://sidh2003.github.io/Snake-Game/" target="_blank" rel="noopener noreferrer">
-              <p class="text-sm text-gray-700">Snake-Game</p>
-            </a></div>
-          <div
-            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-            <a href="https://sidh2003.github.io/Snake-Game/" target="_blank" rel="noopener noreferrer"><img
-                src="./images/send-icon.png" alt="Send Icon" class="w-5"></a>
-          </div>
-        </div>
+      <div id="modalporfolio4-icon" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/portfolio-model-img4.html" alt="portfolio-model-img1" class="img-fluid">
+                  </figure>
+                  <h4>Businesscard UI Design</h4>
+                  <p class="mb-md-4 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release .</p>
+                  <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-    <div class="text-center mt-10">
-      <p class="text-gray-800 text-lg">For more projects, follow my GitHub profile:</p><a
-        href="https://github.com/Sidh2003" target="_blank" rel="noopener noreferrer"
-        class="text-blue-500 hover:text-blue-700 flex items-center justify-center gap-2"><i
-          class="fa-brands fa-github text-2xl"
-          style="color: black; text-decoration: none; display: inline-block;"></i><span class="underline">Visit My
-          GitHub Profile</span></a>
-    </div>
-  </div>
-
-
-
-
-  <!-- ---------------- Contact Us ------------------- -->
-
-
-  <div id="contact">
-    <h4 class="text-center">Contact Me</h4>
-    <h2 class="text-center" style="font-family:'Times New Roman', Times, serif">Get In Touch</h2>
-    <p class="text-center">
-      Have a question, project inquiry, or just want to say hello? I’d love to hear from you. Use the form below to send
-      me a message!
-    </p>
-
-    <form id="contactForm" method="POST" action="https://api.web3forms.com/submit" class="max-w-3xl mx-auto">
-      <input type="hidden" name="access_key" value="c6c85856-ae96-4bfa-bb73-22713949e263">
-
-      <!-- Input Fields -->
-      <div class="input-grid">
-        <input type="text" placeholder="Your Name*" name="name" id="name" required>
-        <input type="email" placeholder="Your Email*" name="email" id="email" required>
+      <div id="modalporfolio5" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/portfolio-model-img5.png" alt="portfolio-model-img1" class="img-fluid">
+                  </figure>
+                  <h4>Real estate UI Design</h4>
+                  <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release .</p>
+                  <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
       </div>
-      <br>
-      <!-- Message Box -->
-      <textarea rows="5" placeholder="Your Message" name="message" id="message" required></textarea>
-
-      <!-- Submit Button -->
-      <div class="text-center">
-        <button type="submit">Submit Now</button>
+      <div id="modalporfolio5-icon" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/portfolio-model-img5.html" alt="portfolio-model-img1" class="img-fluid">
+                  </figure>
+                  <h4>Real estate UI Design</h4>
+                  <p class="mb-md-4 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release .</p>
+                  <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
       </div>
-    </form>
-  </div>
+      <div id="Ui-Design" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/ui-ux-model-img.jpg" alt="ui-ux-model-img" class="img-fluid">
+                  </figure>
+                  <h4>Ui/Ux Design</h4>
+                  <p class="mb-md-4 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+                     <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="web-design" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/web-designer-model-img.jpg" alt="web-designer-model-img" class="img-fluid">
+                  </figure>
+                  <h4>Web Design</h4>
+                  <p class="mb-md-4 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+                     <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="web-development" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/web-development-model-img.jpg" alt="web-development-model-img" class="img-fluid">
+                  </figure>
+                  <h4>Web Development</h4>
+                  <p class="mb-md-4 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+                     <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="app-development" class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body service-model-content">
+                  <figure class="mb-0">
+                     <img src="assets/image/App-development-model-img.jpg" alt="App-development-model-img" class="img-fluid">
+                  </figure>
+                  <h4>App Development</h4>
+                  <p class="mb-md-4 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+                     <ul class="list-unstyled model-list mb-md-3 mb-2">
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                     <li><i class="fas fa-check-circle"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                  </ul>
+                  <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="blog-model-1" class="modal fade blog-model-con" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body">
+                  <div class="blog-box-item mb-0">
+                     <div class="blog-img">
+                        <figure class="mb-0">
+                           <img src="assets/image/blog-model-img1.png" alt="blog-img" class="img-fluid">
+                        </figure>
+                     </div>
+                     <div class="blog-content pl-0 pr-0">
+                        <div class="blog-auteher-title">
+                           <span>By Elina Parker</span>
+                           <span class="float-lg-right">Mar 8, 2022</span>
+                        </div>
+                        <h4>Quis autem vea eum 
+                           iure reprehenderit
+                        </h4>
+                        <div class="footer-social-icon mb-0">
+                           <ul>
+                              <li class="d-inline-block">
+                                 <a href="https://www.behance.net/"><i class="fab fa-behance d-flex align-items-center justify-content-center"></i></a>
+                              </li>
+                              <li class="d-inline-block">
+                                 <a href="https://dribbble.com/"><i class="fab fa-dribbble d-flex align-items-center justify-content-center"></i></a>
+                              </li>
+                              <li class="d-inline-block">
+                                 <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in d-flex align-items-center justify-content-center"></i></a>
+                              </li>
+                           </ul>
+                        </div>
+                        <p class="mb-md-4 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor eros a tellus auctor, nec suscipit nunc dignissim. Ut suscipit gravida augue sed elementum. Sed sed luctus nisl. Donec scelerisque nisi in sodales mattis. Vestibulum suscipit odio ac enim blandit sollicitudin. Aliquam ultrices sem quis urna placerat interdum. Etiam rutrum, quam sagittis tristique mollis, libero arcu scelerisque erat, eget tincidunt eros diam quis nunc.</p>
+                        <h4 class="comment-title">LEAVE A COMMENT</h4>
+                        <form class="contact-form blog-model-form">
+                           <div class="row">
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="form-group mb-0">    
+                                    <input type="text" placeholder="Name" name="name"> 
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="form-group mb-0">
+                                    <input type="email" placeholder="Email">
+                                    <small class="form-text text-muted"></small>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="form-group mb-0">    
+                                    <input type="tel" placeholder="Phone"> 
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="form-group mb-0">    
+                                    <input type="text" placeholder="Subject"> 
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <div class=" form-group mb-0">    
+                                    <textarea placeholder="Message" rows="3" name="comments"></textarea>
+                                 </div>
+                              </div>
+                           </div>
+                           <button type="submit" class="appointment-btn">Submit</button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="blog-model-2" class="modal fade blog-model-con" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body">
+                  <div class="blog-box-item mb-0">
+                     <div class="blog-img">
+                        <figure class="mb-0">
+                           <img src="assets/image/blog-model-img2.png" alt="blog-img" class="img-fluid">
+                        </figure>
+                     </div>
+                     <div class="blog-content pl-0 pr-0">
+                        <div class="blog-auteher-title">
+                           <span>By Elina Parker</span>
+                           <span class="float-lg-right">Mar 9, 2022</span>
+                        </div>
+                        <h4>Reprehenderit in vouta
+                           velit esse cillum
+                        </h4>
+                        <div class="footer-social-icon mb-0">
+                           <ul>
+                              <li class="d-inline-block">
+                                 <a href="https://www.behance.net/"><i class="fab fa-behance d-flex align-items-center justify-content-center"></i></a>
+                              </li>
+                              <li class="d-inline-block">
+                                 <a href="https://dribbble.com/"><i class="fab fa-dribbble d-flex align-items-center justify-content-center"></i></a>
+                              </li>
+                              <li class="d-inline-block">
+                                 <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in d-flex align-items-center justify-content-center"></i></a>
+                              </li>
+                           </ul>
+                        </div>
+                        <p class="mb-md-4 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor eros a tellus auctor, nec suscipit nunc dignissim. Ut suscipit gravida augue sed elementum. Sed sed luctus nisl. Donec scelerisque nisi in sodales mattis. Vestibulum suscipit odio ac enim blandit sollicitudin. Aliquam ultrices sem quis urna placerat interdum. Etiam rutrum, quam sagittis tristique mollis, libero arcu scelerisque erat, eget tincidunt eros diam quis nunc.</p>
+                        <h4 class="comment-title">LEAVE A COMMENT</h4>
+                        <form class="contact-form blog-model-form">
+                           <div class="row">
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="form-group mb-0">    
+                                    <input type="text" placeholder="Name" name="name"> 
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="form-group mb-0">
+                                    <input type="email" placeholder="Email">
+                                    <small class="form-text text-muted"></small>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="form-group mb-0">    
+                                    <input type="tel" placeholder="Phone"> 
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="form-group mb-0">    
+                                    <input type="text" placeholder="Subject"> 
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <div class=" form-group mb-0">    
+                                    <textarea placeholder="Message" rows="3" name="comments"></textarea>
+                                 </div>
+                              </div>
+                           </div>
+                           <button type="submit" class="appointment-btn">Submit</button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="blog-model-3" class="modal fade blog-model-con" tabindex="-1" style="display: none;" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ><i class="far fa-times"></i></span></button>
+               </div>
+               <div class="modal-body">
+                  <div class="blog-box-item mb-0">
+                     <div class="blog-img">
+                        <figure class="mb-0">
+                           <img src="assets/image/blog-model-img1.png" alt="blog-img" class="img-fluid">
+                        </figure>
+                     </div>
+                     <div class="blog-content pl-0 pr-0">
+                        <div class="blog-auteher-title">
+                           <span>By Elina Parker</span>
+                           <span class="float-lg-right">Mar 10, 2022</span>
+                        </div>
+                        <h4>Soluta nobis ose aligen
+                           optio cumue
+                        </h4>
+                        <div class="footer-social-icon mb-0">
+                           <ul>
+                              <li class="d-inline-block">
+                                 <a href="https://www.behance.net/"><i class="fab fa-behance d-flex align-items-center justify-content-center"></i></a>
+                              </li>
+                              <li class="d-inline-block">
+                                 <a href="https://dribbble.com/"><i class="fab fa-dribbble d-flex align-items-center justify-content-center"></i></a>
+                              </li>
+                              <li class="d-inline-block">
+                                 <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in d-flex align-items-center justify-content-center"></i></a>
+                              </li>
+                           </ul>
+                        </div>
+                        <p class="mb-md-4 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor eros a tellus auctor, nec suscipit nunc dignissim. Ut suscipit gravida augue sed elementum. Sed sed luctus nisl. Donec scelerisque nisi in sodales mattis. Vestibulum suscipit odio ac enim blandit sollicitudin. Aliquam ultrices sem quis urna placerat interdum. Etiam rutrum, quam sagittis tristique mollis, libero arcu scelerisque erat, eget tincidunt eros diam quis nunc.</p>
+                        <h4 class="comment-title">LEAVE A COMMENT</h4>
+                        <form class="contact-form blog-model-form">
+                           <div class="row">
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="form-group mb-0">    
+                                    <input type="text" placeholder="Name" name="name"> 
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="form-group mb-0">
+                                    <input type="email" placeholder="Email">
+                                    <small class="form-text text-muted"></small>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="form-group mb-0">    
+                                    <input type="tel" placeholder="Phone"> 
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="form-group mb-0">    
+                                    <input type="text" placeholder="Subject"> 
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <div class=" form-group mb-0">    
+                                    <textarea placeholder="Message" rows="3" name="comments"></textarea>
+                                 </div>
+                              </div>
+                           </div>
+                           <button type="submit" class="appointment-btn">Submit</button>
+                        </form>
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- weight footer section -->
+      <script src="assets/js/wow.js"></script>
+      <script>
+         new WOW().init();
+      </script>
+      <script src="assets/js/jquery-3.6.0.min.js"> </script>
+      <script src="../../ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+      <script src="assets/js/popper.min.js"> </script>
+      <script src="assets/js/bootstrap.min.js"> </script>
+      <script src="assets/js/custom-script.js"> </script>
 
+      <script>
+         filterSelection("all")
+         function filterSelection(c) {
+         var x, i;
+         x = document.getElementsByClassName("filterDiv");
+         if (c == "all") c = "";
+         for (i = 0; i < x.length; i++) {
+         w3RemoveClass(x[i], "show");
+         if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+         }
+         }
+         
+         function w3AddClass(element, name) {
+         var i, arr1, arr2;
+         arr1 = element.className.split(" ");
+         arr2 = name.split(" ");
+         for (i = 0; i < arr2.length; i++) {
+         if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+         }
+         }
+         
+         function w3RemoveClass(element, name) {
+         var i, arr1, arr2;
+         arr1 = element.className.split(" ");
+         arr2 = name.split(" ");
+         for (i = 0; i < arr2.length; i++) {
+         while (arr1.indexOf(arr2[i]) > -1) {
+         arr1.splice(arr1.indexOf(arr2[i]), 1);     
+         }
+         }
+         element.className = arr1.join(" ");
+         }
+         
+         // Add active class to the current button (highlight it)
+         var btnContainer = document.getElementById("myBtnContainer");
+         var btns = btnContainer.getElementsByClassName("btn");
+         for (var i = 0; i < btns.length; i++) {
+         btns[i].addEventListener("click", function(){
+         var current = document.getElementsByClassName("active");
+         current[0].className = current[0].className.replace(" active", "");
+         this.className += " active";
+         });
+         }
+      </script>
+      <script>
+         var btn = $('#button');
+         
+         $(window).scroll(function() {
+         if ($(window).scrollTop() > 300) {
+         btn.addClass('show');
+         } else {
+         btn.removeClass('show');
+         }
+         });
+         
+         btn.on('click', function(e) {
+         e.preventDefault();
+         $('html, body').animate({scrollTop:0}, '300');
+         });
+         
+      </script>
+      <script>
+         $(window).scroll(function(){
+         
+         if ($(window).scrollTop() >= 113) {
+         
+         $('header').addClass('fixed-header');
+         $('.banner-main-con').addClass('banner-main-con2');
+         
+         }
+         
+         else {
+         
+         $('header').removeClass('fixed-header');
+         $('.banner-main-con').removeClass('banner-main-con2');
+         
+         }
+         
+         });
+         
+      </script>
+   <script>
+document.querySelectorAll('.nav-item a').forEach(function(link, index){
 
+link.addEventListener('click', function() {
 
-  <!-- ------------------- Footer ---------------------- -->
+  if(this.classList.contains('is-active')) {
 
-  <div class="mt-20">
-    <a href="https://mail.google.com/mail/?view=cm&to=siddhesh.sonavane8600@gmail.com" target="_blank" class="w-max flex items-center gap-2 mx-auto">
-      <img src="./images/mail_icon.png" alt="Mail Icon" class="w-6">
-      siddhesh.sonavane8600@gmail.com
-  </a>
-  
-    <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
-      <p>© 2025 Siddhesh Sonavane. All rights reserved.</p>
-      <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
-        <li>
-          <div class="tooltip">
-            <a href="https://www.instagram.com/siddhesh_sonavane2415/" target="_blank">
-              <img src="./images/—Pngtree—instagram icon instagram logo_3584852.png" alt="Instagram Logo" class="w-6">
-            </a>
-            <span class="tooltip-text">Instagram</span>
-          </div>
-        </li>
-        <li>
-          <div class="tooltip">
-            <a href="https://github.com/Sidh2003" target="_blank">
-              <img src="./images/github-logo.png" alt="GitHub Logo" class="w-6">
-            </a>
-            <span class="tooltip-text">GitHub</span>
-          </div>
-        </li>
-        <li>
-          <div class="tooltip">
-            <a href="https://www.linkedin.com/in/siddhesh-sonavane/" target="_blank">
-              <img src="./images/linkedin.png" alt="LinkedIn Logo" class="w-6">
-            </a>
-            <span class="tooltip-text">LinkedIn</span>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+    this.classList.remove('is-active');
 
-  <!-- WhatsApp Floating Button -->
-<!-- WhatsApp Floating Button with Tooltip -->
-<div class="fixed bottom-6 right-6 z-50 group">
-  <a 
-  href="https://wa.me/8928678948?text=Hi" 
-  target="_blank" 
-  aria-label="Chat on WhatsApp"
-  class="bg-[#00a336] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 duration-300"
->
-  <!-- WhatsApp SVG Icon -->
-  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 32 32">
-    <path d="M16.003 2.003c-7.732 0-14 6.27-14 14 0 2.47.646 4.883 1.877 7.012L2 30l7.178-1.85a13.922 13.922 0 006.825 1.753h.002c7.732 0 14-6.27 14-14s-6.268-14-14-14zm7.866 19.79c-.334.938-1.637 1.8-2.24 1.913-.574.109-1.302.156-2.095-.13-.484-.166-1.098-.354-1.896-.693-3.336-1.438-5.508-4.973-5.675-5.208-.166-.234-1.353-1.803-1.353-3.437s.857-2.438 1.164-2.77c.305-.33.662-.414.883-.414.219 0 .438.002.629.012.203.01.477-.078.746.567.334.79 1.09 2.727 1.187 2.927.094.195.152.43.03.664-.125.23-.188.375-.367.578-.18.203-.377.453-.54.609-.18.176-.367.367-.158.723.203.355.902 1.488 1.937 2.41 1.332 1.187 2.445 1.555 2.801 1.73.355.176.559.152.766-.09.207-.242.879-1.023 1.113-1.375.23-.352.461-.293.777-.176.312.121 1.977.933 2.316 1.102.34.172.566.254.648.398.078.141.078.82-.256 1.758z"/>
-  </svg>
-</a>
+  } else {
 
+    const activeLink = document.querySelector('a.is-active'); // **
 
-  <!-- Tooltip -->
-  <span class="absolute bottom-16 right-0 w-max bg-black text-white text-xs px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-    Chat on WhatsApp
-  </span>
-</div>
+    if (activeLink) {                                         // **
 
+        activeLink.classList.remove('is-active');             // **
 
+    }                                                         // **
 
+    this.classList.add('is-active');
 
-  <script src="./script.js"></script>
-</body>
+  }
 
+});
+
+});
+
+document.querySelectorAll('#myBtnContainer button').forEach(function(link, index){
+
+link.addEventListener('click', function() {
+
+  if(this.classList.contains('active_button')) {
+
+    this.classList.remove('active_button');
+
+  } else {
+
+    const activeLink = document.querySelector('#myBtnContainer button.active_button'); // **
+
+    if (activeLink) {                                         // **
+
+        activeLink.classList.remove('active_button');             // **
+
+    }                                                         // **
+
+    this.classList.add('active_button');
+
+  }
+
+});
+
+});
+   </script>
+     <script>
+      function downloadImage() {
+        source = 'assets/image/cv-img.html';
+      const fileName = 'test-image.html';
+      var el = document.createElement("a");
+      el.setAttribute("href", source);
+      el.setAttribute("download", fileName);
+      document.body.appendChild(el);
+      el.click();
+      el.remove();
+      }
+    </script>
+    <script src="assets/js/contact-form.js"></script>
+   </body>
+
+<!-- Mirrored from html.designingmedia.com/folioflix/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Nov 2025 16:41:33 GMT -->
 </html>
