@@ -1,1093 +1,707 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Title  -->
-    <title>Siddhesh - Personal Portfolio HTML Template</title>
+<html lang="en">
 
-    <!-- Favicon  -->
-    <link rel="icon" href="assets/img/content/favicon.png" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Siddhesh Sonavane">
+    <meta name="description" content="Siddhesh Sonavane – Full Stack Developer | Agentic AI & Automation">
+    <title>Siddhesh Sonavane | Full Stack & Agentic AI</title>
+    <link rel="shortcut icon" href="assets/img/favicon.svg">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/icomoon.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .split-title .char {
+            display: inline-block;
+        }
 
-    <!-- ***** All CSS Files ***** -->
+        .cert-badge {
+            display: inline-block;
+            background: rgba(147, 242, 3, 0.12);
+            color: #93F203;
+            border: 1px solid rgba(147, 242, 3, 0.3);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
 
-    <!-- Style css -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+        .skill-category-title {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 10px 0 14px;
+            letter-spacing: 0.5px;
+        }
 
-  <body>
-    <!-- ***** Magic Cursor Area Start ***** -->
-    <div id="magic-cursor">
-      <div id="cursor"></div>
-    </div>
-    <!-- ***** Magic Cursor Area End ***** -->
+        .tagline {
+            font-size: 22px;
+            color: #fff;
+            font-weight: 500;
+            margin: 18px 0 26px;
+        }
 
-    <!-- ***** Preloader Area Start ***** -->
-    <!-- <div class="relome-preloader">
-      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-        <path id="loader" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
-      </svg>
+        .tagline span {
+            color: #93F203;
+        }
 
-      <div class="loader-container">
-        <div class="loaded">
-          <span>L</span>
-          <span>O</span>
-          <span>A</span>Building digital pro
-          <span>D</span>
-          <span>I</span>
-          <span>N</span>
-          <span>G</span>
-        </div>
-      </div>
-    </div> -->
-    <!-- ***** Preloader Area End ***** -->
+        .role-line {
+            color: #b5b5b5;
+            font-size: 16px;
+            margin: 0;
+        }
 
-    <!-- ***** Main Area Start ***** -->
-    <div class="main">
-      <!-- ***** Header Start ***** -->
-      <header>
-        <nav
-          id="relome-navbar"
-          data-aos="zoom-out"
-          data-aos-delay="800"
-          class="navbar relome-navbar navbar-expand aos-init aos-animate"
-          style="margin-top: 0px"
-        >
-          <div class="container header">
-            <a class="navbar-brand site-title" href="index.html">Siddhesh</a>
-            <div class="ms-auto ms-md-0"></div>
-            <ul id="primary" class="navbar-nav items">
-              <li
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141 nav-item"
-              >
-                <a href="#services" class="nav-link smooth-anchor">Services</a>
-              </li>
-              <li
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-142 nav-item"
-              >
-                <a href="#resume" class="nav-link smooth-anchor">Resume</a>
-              </li>
-              <li
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143 nav-item"
-              >
-                <a href="#portfolio" class="nav-link smooth-anchor">Works</a>
-              </li>
-              <li
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144 nav-item"
-              >
-                <a href="#skills" class="nav-link smooth-anchor">Skills</a>
-              </li>
-              <li
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145 nav-item"
-              >
-                <a href="#testimonial" class="nav-link smooth-anchor"
-                  >Testimonial</a
-                >
-              </li>
-              <li
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147 nav-item"
-              >
-                <a href="#contact" class="nav-link smooth-anchor">Contact</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav icons d-flex align-items-center">
-              <li class="nav-item">
-                <a href="https://wa.me/918928678948?text=hii" class="nav-link" target="_blank">
-                </a>
-             <i class="fab fa-whatsapp"></i>
-                </a>
-              </li>
-            </ul>
-            <ul class="navbar-nav toggle">
-              <li class="nav-item">
-                <a
-                  href="#"
-                  class="nav-link pe-0"
-                  data-bs-toggle="modal"
-                  data-bs-target="#menu"
-                >
-                  <i class="icon-menu m-0"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <!-- ***** Header End ***** -->
+        .proj-tags {
+            color: #93F203;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
 
-      <!-- ***** Main Wrapper Start ***** -->
-      <div id="main-wrapper" class="main-wrapper">
-        <!-- ***** Hero Area Start ***** -->
-        <section id="home" class="hero-section">
-          <div class="container">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-12 col-md-9">
-                <!-- Hero Content -->
-                <div class="hero-content text-center">
-                  <img class="hero-thumb" src="assets/img/my-pic.jpeg" alt="" />
+<body>
+    <div class="page-wrapper">
 
-                  <!-- Heading -->
-                  <div class="tl-widget heading mt-3">
-                    <h2 class="title m-0">
-                      <span class="title-before"
-                        >Building digital products, brands,</span
-                      >
-                      and experience.
-                    </h2>
-                  </div>
+        <!-- Preloader -->
+        <div class="preloader">
+            <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+                <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+            </svg>
 
-                  <h5 class="bio">
-                    Hi! I’m Siddhesh – A Passionate Laravel & Web Developer from Mumbai.
-                  </h5>
 
-                  <!-- Hero Button -->
-                  <div class="hero-button mt-3 mt-md-5">
-                    <a
-                      class="tl-widget button swap-icon smooth-anchor"
-                      href="#portfolio"
-                      >See My Work
-                      <span class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                      </span>
-                    </a>
-                  </div>
+            <div class="preloader-heading">
+                <div class="load-text">
+                    <span>L</span>
+                    <span>O</span>
+                    <span>A</span>
+                    <span>D</span>
+                    <span>I</span>
+                    <span>N</span>
+                    <span>G</span>
                 </div>
-              </div>
             </div>
-          </div>
-        </section>
-        <!-- ***** Hero Area End ***** -->
 
-        <!-- ***** Fun Facts Area Start ***** -->
-        <section class="fun-facts p-0">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-12 col-md-11">
-                <div class="row items content">
-                  <div class="col">
-                    <!-- TL Counter -->
-                    <div class="tl-counter">
-                      <div class="tl-counter-title">Years of Experience</div>
-                      <div class="tl-counter-number-wrapper">
-                        <h2 class="tl-counter-number counter">2</h2>
-                        <span class="tl-counter-number-suffix"></span>
-                      </div>
+
+            <style>
+                .preloader-heading {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .load-text {
+                    display: flex;
+                    gap: 5px;
+                }
+
+                .load-text span {
+                    display: inline-block;
+                    font-size: 42px;
+                    font-weight: 800;
+                    color: #fff;
+                    animation: letterLoading 1.5s ease-in-out infinite;
+                }
+
+                .load-text span:nth-child(1) {
+                    animation-delay: 0s;
+                }
+
+                .load-text span:nth-child(2) {
+                    animation-delay: 0.1s;
+                }
+
+                .load-text span:nth-child(3) {
+                    animation-delay: 0.2s;
+                }
+
+                .load-text span:nth-child(4) {
+                    animation-delay: 0.3s;
+                }
+
+                .load-text span:nth-child(5) {
+                    animation-delay: 0.4s;
+                }
+
+                .load-text span:nth-child(6) {
+                    animation-delay: 0.5s;
+                }
+
+                .load-text span:nth-child(7) {
+                    animation-delay: 0.6s;
+                }
+
+                .load-text span:nth-child(8) {
+                    animation-delay: 0.7s;
+                }
+
+                @keyframes letterLoading {
+
+                    0%,
+                    100% {
+                        opacity: 0.3;
+                        transform: translateY(0);
+                    }
+
+                    50% {
+                        opacity: 1;
+                        transform: translateY(-12px);
+                    }
+                }
+            </style>
+
+        </div>
+
+        <button id="back-top" class="back-to-top"><i class="fa-regular fa-arrow-up"></i></button>
+        <div class="mouseCursor cursor-outer"></div>
+        <div class="mouseCursor cursor-inner"></div>
+
+        <!-- Offcanvas -->
+        <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="#hero">
+                                    <h3 class="text-white mb-0" style="font-weight:700;font-size:24px;">Siddhesh<span
+                                            style="color:#93F203;">.</span></h3>
+                                </a>
+                            </div>
+                            <div class="offcanvas__close"><button><i class="fa-thin fa-times"></i></button></div>
+                        </div>
+                        <div class="mobile-menu fix"></div>
+                        <div class="off-contact-info">
+                            <span class="info-title">Contact</span>
+                            <div class="contact-details">
+                                <p><a href="mailto:siddhesh.sonavane024@gmail.com">siddhesh.sonavane024@gmail.com</a>
+                                </p>
+                            </div>
+                            <div class="contact-details">
+                                <p><a href="tel:+918928678948">+91-8928678948</a></p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-
-                  <div class="col">
-                    <!-- TL Counter -->
-                    <div class="tl-counter">
-                      <div class="tl-counter-title">Projects Completed</div>
-                      <div class="tl-counter-number-wrapper">
-                        <h2 class="tl-counter-number counter">50</h2>
-                        <span class="tl-counter-number-suffix">+</span>
-                      </div>
+                    <div class="social-icon-list">
+                        <span class="follow-title">Connect:</span>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="https://www.linkedin.com/in/siddhesh-sonavane/" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/sidh2003" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="mailto:siddhesh.sonavane024@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
                     </div>
-                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div>
 
-                  <div class="col">
-                    <!-- TL Counter -->
-                    <div class="tl-counter">
-                      <div class="tl-counter-title">Clients Mumbai</div>
-                      <div class="tl-counter-number-wrapper">
-                        <h2 class="tl-counter-number counter">10</h2>
-                        <span class="tl-counter-number-suffix"></span>
-                      </div>
+        <!-- Header -->
+        <header id="header-sticky" class="header-1 header-2">
+            <div class="container">
+                <div class="mega-menu-wrapper">
+                    <div class="header-main">
+                        <a href="#hero" class="logo">
+                            <h3 class="mb-0 text-white" style="font-weight:700;font-size:26px;">Siddhesh<span
+                                    style="color:#93F203;">.</span></h3>
+                        </a>
+                        <div class="mean__menu-wrapper">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a class="circle-menu-box" href="#hero">Home</a></li>
+                                        <li><a class="circle-menu-box" href="#about">About</a></li>
+                                        <li><a class="circle-menu-box" href="#skills">Skills</a></li>
+                                        <li><a class="circle-menu-box" href="#experience">Experience</a></li>
+                                        <li><a class="circle-menu-box" href="#projects">Projects</a></li>
+                                        <li><a class="circle-menu-box" href="#education">Education</a></li>
+                                        <li><a class="circle-menu-box" href="#contact">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="header-right d-flex justify-content-end align-items-center">
+                            <a href="#contact" class="theme-btn">Let's Talk</a>
+                            <div class="header__hamburger d-xl-none my-auto">
+                                <div class="sidebar__toggle"><span></span><span></span><span></span></div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                </div>
+            </div>
+        </header>
 
-                  <div class="col">
-                    <!-- TL Counter -->
-                    <div class="tl-counter">
-                      <div class="tl-counter-title">Awards Achieved</div>
-                      <div class="tl-counter-number-wrapper">
-                        <h2 class="tl-counter-number counter">12</h2>
-                        <span class="tl-counter-number-suffix">+</span>
-                      </div>
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+
+                <!-- Hero -->
+                <section id="hero" class="hero-section hero-section1 hero-2 fix bg-cover"
+                    style="background-image: url('assets/img/home-2/hero-bg.jpg');">
+                    <div class="hero-shape"><img src="assets/img/home-2/hero-shape-1.png" alt="shape"></div>
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="split-title">Siddhesh Sonavane</h1>
+                            <div class="row align-items-end">
+                                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="hero-left-content">
+                                        <ul>
+                                            <li>
+                                                <p><span>=></span> Full Stack</p>
+                                            </li>
+                                            <li>
+                                                <p><span>=></span> Agentic AI</p>
+                                            </li>
+                                            <li>
+                                                <p><span>=></span> UI/UX</p>
+                                            </li>
+                                        </ul>
+                                        <div class="social-icon">
+                                            <a href="https://www.linkedin.com/in/siddhesh-sonavane/" target="_blank"
+                                                rel="noopener noreferrer"><img src="assets/img/icon/linkedin.svg"
+                                                    alt="LinkedIn"></a>
+                                            <a href="https://github.com/sidh2003" target="_blank"
+                                                rel="noopener noreferrer"><img src="assets/img/icon/github.svg"
+                                                    alt="GitHub"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 order-2 order-xl-1 text-center">
+                                    <div class="hero-image"
+                                        style="width:100%;max-width:1000px;aspect-ratio:1000/797;display:flex;justify-content:center;align-items:center;overflow:hidden;margin-left:auto;margin-right:auto;">
+                                        <img class="tilt_scale" src="assets/me.png" alt="Siddhesh Sonavane"
+                                            style="width:100%;height:100%;object-fit:contain;display:block;margin:0 auto;">
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-md-6 order-1 order-xxl-1 wow fadeInUp"
+                                    data-wow-delay=".5s">
+                                    <div class="hero-right-content">
+                                        <p>I build web apps that think. <br>2+ years. Code meets AI.</p>
+                                        <div class="hero-btn">
+                                            <div class="flesh-icon"><img src="assets/img/icon/flash.png" alt="Hire">
+                                            </div>
+                                            <a href="#contact" class="theme-btn">Hire Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- ***** Fun Facts Area End ***** -->
+                </section>
 
-        <!-- ***** Services Area Start ***** -->
-        <section id="services" class="services">
-          <div class="container">
-            <div
-              class="row justify-content-center align-items-center intro text-center"
-            >
-              <div class="col-12 col-md-7">
-                <div class="tl-widget heading">
-                  <h3 class="title m-0">
-                    <span class="title-before"
-                      >Colleborate with brand and agencies to create</span
-                    >
-                    impactful results
-                  </h3>
-                </div>
-              </div>
-            </div>
 
-            <div class="row tl-widget items">
-              <!-- Service Item -->
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="service-item image-box">
-                  <div class="service-image">
-                    <img
-                      src="assets/img/content/icon-1.png"
-                      alt="UX &amp; UI"
-                    />
-                  </div>
-                  <div class="card-content">
-                    <div class="heading">
-                      <a href="service-single.html">
-                        <h5 class="title">UX &amp; UI</h5>
-                      </a>
-                      <p>
-                        Creating clean, modern, and user-friendly web interfaces with intuitive layouts, smooth interactions, and responsive designs.
-                      </p>
+                <!-- About + Metrics -->
+                <section id="about" class="about-section fix py-5">
+                    <div class="container">
+                        <div class="about-wrapper-inner section-bg">
+                            <div class="row align-items-center">
+                                <div class="col-xl-7">
+                                    <div class="about-content">
+
+                                        <span class="sub-title tz-sub-tilte tz-sub-anim tx-subTitle"
+                                            style="color:#93F203;margin-bottom:12px;display:inline-block;">{ About
+                                            }</span>
+
+                                        <span class="work-text wow fadeInUp">
+                                            Building the Future with Technology
+                                        </span>
+
+                                        <div class="section-title mb-0 split-title">
+                                            <h2 class="style-3 text-white">
+                                                Think Smart.<br>
+                                                Build Better.<br>
+                                                Automate Everything.
+                                            </h2>
+                                        </div>
+
+                                        <p class="tagline wow fadeInUp" data-wow-delay=".2s">
+                                            Web Development <span>+</span>
+                                            AI Agents <span>+</span>
+                                            Cloud Automation
+                                        </p>
+
+                                        <div class="about-btn-area wow fadeInUp" data-wow-delay=".4s">
+
+                                            <a href="#contact" class="theme-btn">
+                                                Let's Collaborate
+                                            </a>
+
+                                            <a href="assets/Siddhesh_Sonavane_Resume.pdf" target="_blank"
+                                                class="social-icon">
+                                                Resume (PDF)
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-5 col-lg-5 mt-4 mt-xl-0 wow fadeInUp" data-wow-delay=".3s">
+
+                                    <div class="about-img">
+                                        <img src="assets/about-us.png" alt="Technology and Innovation">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
+                </section>
 
-              <!-- Service Item -->
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="service-item image-box">
-                  <div class="service-image">
-                    <img
-                      src="assets/img/content/icon-2.png"
-                      alt="Web &amp; Mobile App"
-                    />
-                  </div>
-                  <div class="card-content">
-                    <div class="heading">
-                      <a href="service-single.html">
-                        <h5 class="title">Web &amp; Mobile App</h5>
-                      </a>
-                      <p>
-                       Developing all types of websites static, dynamic, portfolio, business sites, and custom web applications using Laravel, PHP, and JavaScript.
-                      </p>
+
+                <section id="metrics" class="counter-feature-section section-padding fix pt-0">
+                    <div class="container">
+                        <div class="row g-4">
+                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="counter-feature-box style-2">
+                                    <div class="counter-top">
+                                        <div class="icon"><img src="assets/img/inner/about/counter-01.png" alt="icon">
+                                        </div>
+                                        <h2><span class="count">2</span>+</h2>
+                                    </div>
+                                    <p>Years building</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                                <div class="counter-feature-box style-2">
+                                    <div class="counter-top">
+                                        <div class="icon"><img src="assets/img/inner/about/counter-02.png" alt="icon">
+                                        </div>
+                                        <h2><span class="count">10</span>+</h2>
+                                    </div>
+                                    <p>Projects shipped</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                                <div class="counter-feature-box style-2">
+                                    <div class="counter-top">
+                                        <div class="icon"><img src="assets/img/inner/about/counter-03.png" alt="icon">
+                                        </div>
+                                        <h2><span class="count">100</span>%</h2>
+                                    </div>
+                                    <p>Clean code</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
+                </section>
 
-              <!-- Service Item -->
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="service-item image-box">
-                  <div class="service-image">
-                    <img
-                      src="assets/img/content/icon-3.png"
-                      alt="Design &amp; Creative"
-                    />
-                  </div>
-                  <div class="card-content">
-                    <div class="heading">
-                      <a href="service-single.html">
-                        <h5 class="title">Design &amp; Creative</h5>
-                      </a>
-                      <p>
-                       Designing visually appealing and professional website layouts that strengthen brand identity and enhance user experience.
-                      </p>
+                <!-- Skills -->
+                <section id="skills" class="tech-stack-section section-padding fix section-bg">
+                    <div class="stack-shape-1"><img src="assets/img/home-2/stack-shape-1.png" alt="shape"></div>
+                    <div class="stack-shape-2"><img src="assets/img/home-2/stack-shape-2.png" alt="shape"></div>
+                    <div class="stack-bg-shape"><img src="assets/img/home-2/stack-shape-3.png" alt="shape"></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-10">
+                                <div class="tech-stack-content">
+                                    <div class="section-title text-center">
+                                        <span class="sub-title tz-sub-tilte tz-sub-anim tx-subTitle">{ Skills }</span>
+                                        <h2 class="style-2 split-title text-white"><span>Technical</span> Skills</h2>
+                                    </div>
+                                    <div class="stack-list wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="skill-category-title text-center">AI</div>
+                                        <div class="stack-area">
+                                            <span class="stack-icon">AI Agents</span>
+                                            <span class="stack-icon">Gemini</span>
+                                            <span class="stack-icon">LLMs</span>
+                                            <span class="stack-icon">RAG</span>
+                                        </div>
+                                        <div class="skill-category-title text-center mt-4">Build</div>
+                                        <div class="stack-area style-2">
+                                            <span class="stack-icon">Laravel</span>
+                                            <span class="stack-icon">Node.js</span>
+                                            <span class="stack-icon">PHP</span>
+                                            <span class="stack-icon">MySQL</span>
+                                            <span class="stack-icon">REST APIs</span>
+                                            <span class="stack-icon">JavaScript</span>
+                                        </div>
+                                        <div class="skill-category-title text-center mt-4">Design &amp; Cloud</div>
+                                        <div class="stack-area">
+                                            <span class="stack-icon">Figma</span>
+                                            <span class="stack-icon">Bootstrap</span>
+                                            <span class="stack-icon">GCP</span>
+                                            <span class="stack-icon">AWS</span>
+                                            <span class="stack-icon">Docker</span>
+                                            <span class="stack-icon">Git</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
+                </section>
 
-              <!-- Service Item -->
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="service-item image-box">
-                  <div class="service-image">
-                    <img
-                      src="assets/img/content/icon-4.png"
-                      alt="Development"
-                    />
-                  </div>
-                  <div class="card-content">
-                    <div class="heading">
-                      <a href="service-single.html">
-                        <h5 class="title">Development</h5>
-                      </a>
-                      <p>
-                       Building robust CRM systems, ERP modules, and e-commerce platforms tailored to business needs with secure, scalable functionality.
-                      </p>
+                <!-- Experience -->
+                <section id="experience" class="work-positions fix section-padding">
+                    <div class="container">
+                        <div class="section-title text-center text-xl-start split-title">
+                            <span class="sub-title tz-sub-tilte tz-sub-anim tx-subTitle">{ Experience }</span>
+                            <h2 class="style-3">Work <br> Experience</h2>
+                        </div>
+
+                        <div class="work-positions-items active">
+                            <span class="year">2026 – Now</span>
+                            <h3 class="title">Technosprout Systems Pvt Ltd</h3>
+                            <div class="content">
+                                <h4 class="title-2">Application Expert Frontend</h4>
+                                <p class="role-line">Node.js · AI Agents · GCP</p>
+                            </div>
+                        </div>
+
+                        <div class="work-positions-items">
+                            <span class="year">2025 – 26</span>
+                            <h3 class="title">Nextus Global Pvt Ltd</h3>
+                            <div class="content">
+                                <h4 class="title-2">Full Stack Developer</h4>
+                                <p class="role-line">Laravel · Node.js · API</p>
+                            </div>
+                        </div>
+
+                        <div class="work-positions-items">
+                            <span class="year">2024 – 25</span>
+                            <h3 class="title">Technicul Cloud LLP</h3>
+                            <div class="content">
+                                <h4 class="title-2">Web Dev &amp; Designer</h4>
+                                <p class="role-line">Laravel · Figma · Dashboards</p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- ***** Services Area End ***** -->
+                </section>
 
-        <!-- ***** Experience Area Start ***** -->
-        <section id="resume" class="experience p-0">
-  <div class="container">
-    <div class="row">
-      
-      <!-- EXPERIENCE SECTION -->
-      <div class="col-12 col-md-6">
-        <div class="tl-widget heading mb-4">
-          <h3 class="title m-0">
-            <span class="title-before">My work</span> experience
-          </h3>
+                <!-- Projects -->
+                <section id="projects" class="project-section-2 section-padding fix pt-0">
+                    <div class="project-shape-1"><img src="assets/img/home-2/project-shape-1.png" alt="shape"></div>
+                    <div class="container">
+                        <div class="section-title">
+                            <span class="sub-title tz-sub-tilte tz-sub-anim tx-subTitle">{ Projects }</span>
+                            <h2 class="style-2 split-title"><span>Featured</span> Projects</h2>
+                        </div>
+                        <div class="row align-items-center">
+
+
+                            <div class="col-xl-12 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="project-left-content">
+                                    <h3 class="title"><a href="#projects">AI Marketing Agent</a></h3>
+                                    <p>News in. LinkedIn post out.</p>
+                                    <span class="proj-tags">Node.js · RSS · LLM</span>
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="project-thumb-items-2">
+                                    <div class="thumb">
+                                        <img src="assets/gemini.png" alt="CRM Automations">
+                                        <img src="assets/gemini.png" alt="CRM Automations">
+                                    </div>
+                                    <div class="project-left-content">
+                                        <h3 class="title"><a href="#projects">CRM + Gemini Agents</a></h3>
+                                        <p>Workflows on autopilot.</p>
+                                        <span class="proj-tags">HubSpot · Gemini · GCP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                <div class="project-thumb-items-2">
+                                    <div class="thumb">
+                                        <img src="assets/laravel-dashboard.png" alt="Laravel Web App">
+                                        <img src="assets/laravel-dashboard.png" alt="Laravel Web App">
+                                    </div>
+                                    <div class="project-left-content">
+                                        <h3 class="title"><a href="#projects">Laravel Dashboards</a></h3>
+                                        <p>Secure. Scalable. Role-based.</p>
+                                        <span class="proj-tags">Laravel · MySQL · RBAC</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="project-thumb-items-2">
+                                    <div class="thumb">
+                                        <img src="assets/hrms.png" alt="HRMS Web Application">
+                                        <img src="assets/hrms.png" alt="HRMS Web Application">
+                                    </div>
+                                    <div class="project-left-content">
+                                        <h3 class="title"><a href="#projects">HRMS Web Application</a></h3>
+                                        <p>APIs, utilities, experiments.</p>
+                                        <span class="proj-tags">Node.js · Docker · MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                <div class="project-thumb-items-2">
+                                    <div class="thumb">
+                                        <img src="assets/auto-ecom.png" alt="E-com">
+                                        <img src="assets/auto-ecom.png" alt="E-com">
+                                    </div>
+                                    <div class="project-left-content">
+                                        <h3 class="title"><a href="https://autovehicleparts.com/" target="_blank"
+                                                rel="noopener noreferrer">Auto Vehicle Parts (E-Commerce)</a></h3>
+                                        <p>APIs, utilities, experiments.</p>
+                                        <span class="proj-tags">Node.js · React · MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section id="education" class="career-waypoint-section section-padding fix section-bg">
+                    <div class="container">
+                        <div class="section-title">
+                            <span class="sub-title tz-sub-tilte tz-sub-anim tx-subTitle">{ Education }</span>
+                            <h2 class="style-2 split-title text-white"><span>Education</span> &amp; Certs</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="waypoint-box-items">
+                                    <span class="cert-badge">MCA</span>
+                                    <h3 class="title text-white">CSMU, Panvel</h3>
+                                    <p>CGPA <b>8.10</b></p>
+                                    <h4>2024 – 26</h4>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                                <div class="waypoint-box-items style-2">
+                                    <span class="cert-badge">B.Sc. IT</span>
+                                    <h3 class="title text-white">Mumbai University</h3>
+                                    <p>CGPA <b>8.90</b></p>
+                                    <h4>2020 – 23</h4>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="waypoint-box-items style-3">
+                                    <span class="cert-badge">Google Cloud</span>
+                                    <h3 class="title text-white">Gemini Enterprise Agent</h3>
+                                    <h4>Certified</h4>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                                <div class="waypoint-box-items style-4">
+                                    <span class="cert-badge">Qspiders</span>
+                                    <h3 class="title text-white">Full Stack Developer</h3>
+                                    <h4>Certified</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact -->
+                <section id="contact" class="contact-section-2 section-padding fix bg-cover"
+                    style="background-image: url('assets/img/home-2/contact-bg.jpg');">
+                    <div class="contact-shape-1"><img src="assets/img/home-2/contact-shape-1.png" alt="shape"></div>
+                    <div class="container">
+                        <div class="row g-4 align-items-center justify-content-between">
+                            <div class="col-xl-5 col-lg-6">
+                                <div class="contact-left-contect-2">
+                                    <div class="section-title">
+                                        <span class="sub-title tz-sub-tilte tz-sub-anim tx-subTitle"
+                                            style="color:#93F203;">{ Contact }</span>
+                                        <h2 class="style-2 split-title text-white">Let's Build <span>Together</span>
+                                        </h2>
+                                    </div>
+                                    <div class="mt-4 wow fadeInUp" data-wow-delay=".4s">
+                                        <p class="text-white mb-2" style="font-size:16px;">
+                                            <i class="fas fa-envelope" style="color:#93F203;width:24px;"></i>
+                                            <a href="mailto:siddhesh.sonavane024@gmail.com"
+                                                class="text-white">siddhesh.sonavane024@gmail.com</a>
+                                        </p>
+                                        <p class="text-white mb-3" style="font-size:16px;">
+                                            <i class="fas fa-phone" style="color:#93F203;width:24px;"></i>
+                                            <a href="tel:+918928678948" class="text-white">+91-8928678948</a>
+                                        </p>
+                                        <div class="d-flex gap-3 mt-3">
+                                            <a href="https://www.linkedin.com/in/siddhesh-sonavane/" target="_blank"
+                                                rel="noopener noreferrer" class="theme-btn"
+                                                style="font-size:14px;">LinkedIn</a>
+                                            <a href="https://github.com/sidh2003" target="_blank"
+                                                rel="noopener noreferrer" class="theme-btn"
+                                                style="font-size:14px;background:transparent;border:1px solid #93F203;color:#93F203;">GitHub</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="contact-right-content-2">
+                                    <form action="https://formspree.io/f/mzeelewo" method="POST" id="contact-form"
+                                        class="contact-form-box">
+                                        <div class="row g-4 align-items-center justify-content-center">
+                                            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                                                <div class="form-clt"><span>Name</span>
+                                                    <input type="text" name="name" id="name" placeholder="Name"
+                                                        required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                                                <div class="form-clt"><span>Email</span>
+                                                    <input type="email" name="email" id="email2" placeholder="Email"
+                                                        required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 wow fadeInUp" data-wow-delay=".6s">
+                                                <div class="form-clt"><span>Message</span>
+                                                    <textarea name="message" id="message" placeholder="Tell me more..."
+                                                        required></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 wow fadeInUp" data-wow-delay=".8s">
+                                                <div class="contact-button">
+                                                    <button type="submit" class="theme-btn w-100">Send Message</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="footer-section pb-0 fix">
+                    <div class="footer-shape"><img src="assets/img/home-1/footer-shape.png" alt="shape"></div>
+                    <div class="container">
+                        <div class="footer-bottom-wrapper">
+                            <p class="wow fadeInLeft" data-wow-delay=".5s">© 2026 Siddhesh Sonavane</p>
+                            <a href="#hero" class="theme-btn wow fadeInRight" data-wow-delay=".5s">Back to Top</a>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
         </div>
-
-        <div class="row items">
-
-          <!-- Experience 1 -->
-          <div class="tl-widget icon-box left-aligned item">
-            <div class="icon-wrapper icon-animation">
-              <span class="icon-group stacked shape-circle">
-                <i class="icon bi-asterisk"></i>
-              </span>
-            </div>
-            <div class="content">
-              <h4 class="title">Full Stack Laravel Developer – Nextus Global Services</h4>
-              <p class="description m-0">
-                Developed and maintained large-scale Laravel applications, implemented APIs,
-                optimized MySQL queries, and built responsive UI components. Worked closely
-                with design and backend teams to deliver scalable and secure web solutions.
-              </p>
-            </div>
-          </div>
-
-          <!-- Experience 2 -->
-          <div class="tl-widget icon-box left-aligned item">
-            <div class="icon-wrapper">
-              <span class="icon-group stacked shape-circle">
-                <i class="icon bi-lightning"></i>
-              </span>
-            </div>
-            <div class="content">
-              <h4 class="title">Web Developer – Technicul Cloud LLP</h4>
-              <p class="description m-0">
-                Built custom dynamic websites, admin panels, and CRM modules using Laravel,
-                PHP, JavaScript, and MySQL. Improved performance, implemented APIs, and
-                created responsive UI designs based on Figma wireframes.
-              </p>
-            </div>
-          </div>
-
-          <!-- Experience 3 -->
-          <div class="tl-widget icon-box left-aligned item">
-            <div class="icon-wrapper">
-              <span class="icon-group stacked shape-circle">
-                <i class="icon bi-bezier2"></i>
-              </span>
-            </div>
-            <div class="content">
-              <h4 class="title">Frontend Developer / UI & UX (Freelancing)</h4>
-              <p class="description m-0">
-                Designed modern user interfaces and implemented responsive layouts using
-                HTML, CSS, JavaScript, and Bootstrap. Focused on delivering clean,
-                intuitive, and user-friendly web experiences.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- EDUCATION SECTION -->
-      <div class="col-12 col-md-6">
-        <div class="tl-widget heading mb-4">
-          <h3 class="title m-md-0">
-            <span class="title-before">My</span> education
-          </h3>
-        </div>
-
-        <div class="row items">
-
-          <!-- Education 1 -->
-          <div class="tl-widget icon-box left-aligned item">
-            <div class="icon-wrapper">
-              <span class="icon-group stacked shape-circle">
-                <i class="icon bi-award"></i>
-              </span>
-            </div>
-            <div class="content">
-              <div class="tl-widget badge">2024 – Present</div>
-              <h4 class="title mt-3">Master of Computer Applications (MCA)</h4>
-              <p class="description m-0">
-                Chhatrapati Shivaji Maharaj University, Panvel — Pursuing advanced
-                computer application development and software engineering concepts.
-              </p>
-            </div>
-          </div>
-
-          <!-- Education 2 -->
-          <div class="tl-widget icon-box left-aligned item">
-            <div class="icon-wrapper">
-              <span class="icon-group stacked shape-circle">
-                <i class="icon bi-broadcast-pin"></i>
-              </span>
-            </div>
-            <div class="content">
-              <div class="tl-widget badge">2020 – 2023</div>
-              <h4 class="title mt-3">Bachelor of Science in Information Technology (B.Sc IT)</h4>
-              <p class="description m-0">
-                K. M. Agrawal College, Mumbai University — Graduated with 8.90 CGPA,
-                focused on programming, database management, and web development.
-              </p>
-            </div>
-          </div>
-
-          <!-- Education 3 -->
-          <div class="tl-widget icon-box left-aligned item">
-            <div class="icon-wrapper">
-              <span class="icon-group stacked shape-circle">
-                <i class="icon bi-patch-check"></i>
-              </span>
-            </div>
-            <div class="content">
-              <div class="tl-widget badge">2023 – 2024</div>
-              <h4 class="title mt-3">Full Stack Development Certification</h4>
-              <p class="description m-0">
-                QSpiders, Thane — Completed hands-on training in Laravel, PHP, JavaScript,
-                SQL, UI development, and project-based application building.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-        <!-- ***** Experience Area End ***** -->
-
-        <!-- ***** Portfolio Area Start ***** -->
-        <section id="portfolio" class="tl-widget portfolio">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-7">
-        <!-- Intro -->
-        <div class="intro text-center">
-          <div class="tl-widget heading">
-            <h3 class="title m-0">
-              <span class="title-before">A small selection of</span>
-              recent projects
-            </h3>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Filter removed since only 4 cards -->
-
-    <!-- Portfolio Items -->
-    <div class="row filter-items items inner">
-
-      <!-- Card 1 -->
-      <div class="col-12 col-md-6 item filter-item">
-        <div class="card-item portfolio-item scale">
-          <a href="#">
-            <div class="image-holder">
-              <div class="card-thumb">
-                <img src="assets/img/ai.jpg" class="card-img-top" alt="Project 1" />
-              </div>
-            </div>
-          </a>
-          <div class="card-content mt-3">
-            <div class="heading">
-              <h5 class="title m-0">AI Robot Voice Assistant</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-12 col-md-6 item filter-item">
-        <div class="card-item portfolio-item scale">
-          <a href="#">
-            <div class="image-holder">
-              <div class="card-thumb">
-                <img src="assets/img/dashbord.jpg" class="card-img-top" alt="Project 2" />
-              </div>
-            </div>
-          </a>
-          <div class="card-content mt-3">
-            <div class="heading">
-              <h5 class="title m-0">Premium Dashboard UI</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-12 col-md-6 item filter-item">
-        <div class="card-item portfolio-item scale">
-          <a href="#">
-            <div class="image-holder">
-              <div class="card-thumb">
-                <img src="assets/img/snake-game.jpg" class="card-img-top" alt="Project 3" />
-              </div>
-            </div>
-          </a>
-          <div class="card-content mt-3">
-            <div class="heading">
-              <h5 class="title m-0">Classic Snake Game</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col-12 col-md-6 item filter-item">
-        <div class="card-item portfolio-item scale">
-          <a href="#">
-            <div class="image-holder">
-              <div class="card-thumb">
-                <img src="assets/img/qr.jpg" class="card-img-top" alt="Project 4" />
-              </div>
-            </div>
-          </a>
-          <div class="card-content mt-3">
-            <div class="heading">
-              <h5 class="title m-0">QR Code Generator Tool</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
 
-    <!-- GitHub Section -->
-    <div class="row mt-5 text-center">
-      <div class="col-12">
-        <a href="https://github.com/Sidh2003" target="_blank" style="font-size: 2rem;">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <p class="mt-2" style="font-size: 1rem;">
-          For more projects, visit my GitHub profile
-          <a href="https://github.com/Sidh2003" target="_blank">here</a>.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-<style>
-.card-thumb img {
-    width: 100%;
-    height: 416px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-</style>
-
-        <!-- ***** Portfolio Area End ***** -->
-
-        <style>
-          .skills .item img {
-    width: 47px !important;
-    height: 54px !important;
-    object-fit: contain;   /* keeps quality without stretching */
-    object-position: center;
-    display: block;
-    margin: 0 auto;
-}
-
-        </style>
-
-        <!-- ***** Skills Area Start ***** -->
-        <section id="skills" class="skills p-0">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-7">
-        <!-- Intro -->
-        <div class="intro text-center">
-          <div class="tl-widget heading">
-            <h3 class="title m-0">
-              <span class="title-before">My</span> skills
-            </h3>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row gap-4">
-
-      <!-- HTML -->
-      <div class="col item filter-grayscale">
-        <img src="assets/img/content/skill-3.png" alt="HTML" />
-        <div class="content mt-3">
-          <span class="percentage counter">98%</span>
-          <div class="title">HTML</div>
-        </div>
-      </div>
-
-      <!-- CSS -->
-      <div class="col item filter-grayscale">
-        <img src="assets/img/content/css.png" alt="CSS" />
-        <div class="content mt-3">
-          <span class="percentage counter">95%</span>
-          <div class="title">CSS</div>
-        </div>
-      </div>
-
-      <!-- JavaScript -->
-      <div class="col item filter-grayscale">
-        <img src="assets/img/content/skill-6.png" alt="JavaScript" />
-        <div class="content mt-3">
-          <span class="percentage counter">90%</span>
-          <div class="title">JavaScript</div>
-        </div>
-      </div>
-
-      <!-- Laravel -->
-      <div class="col item filter-grayscale">
-        <img src="assets/img/content/laravel.png" alt="Laravel" />
-        <div class="content mt-3">
-          <span class="percentage counter">92%</span>
-          <div class="title">Laravel</div>
-        </div>
-      </div>
-
-      <!-- MySQL -->
-      <div class="col item filter-grayscale">
-        <img src="assets/img/content/sql.png" alt="MySQL" />
-        <div class="content mt-3">
-          <span class="percentage counter">85%</span>
-          <div class="title">MySQL</div>
-        </div>
-      </div>
-
-      <!-- Figma -->
-      <div class="col item filter-grayscale">
-        <img src="assets/img/content/skill-2.png" alt="Figma" />
-        <div class="content mt-3">
-          <span class="percentage counter">88%</span>
-          <div class="title">Figma (UI/UX)</div>
-        </div>
-      </div>
-
-      <!-- Git/GitHub -->
-      <div class="col item filter-grayscale">
-        <img src="assets/img/content/git.png" alt="GitHub" />
-        <div class="content mt-3">
-          <span class="percentage counter">85%</span>
-          <div class="title">Git & GitHub</div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-        <!-- ***** Skills Area End ***** -->
-
-        <!-- ***** Approach Area Start ***** -->
-        <section class="approach">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-7">
-        <!-- Intro -->
-        <div class="intro text-center">
-          <div class="tl-widget heading">
-            <h3 class="title m-0">
-              <span class="title-before">My</span> approach
-            </h3>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row items justify-content-center align-items-center">
-      
-      <!-- STEP 01 -->
-      <div class="col-12 col-md-4">
-        <div class="item d-flex align-items-end">
-          <div class="item-count">01</div>
-          <div class="tl-widget heading">
-            <h4 class="title m-0">
-              <span class="title-before">Define</span>
-            </h4>
-            <div class="subtitle">
-              Understanding your business needs, project requirements, and goals.
-              I analyze your ideas, identify the best technical approach, and
-              create a clear roadmap for building a functional and scalable web solution.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- STEP 02 -->
-      <div class="col-12 col-md-4">
-        <div class="item d-flex align-items-start card-angle-animation">
-          <div class="item-count">02</div>
-          <div class="tl-widget heading">
-            <h4 class="title m-0">
-              <span class="title-before">Develop</span>
-            </h4>
-            <div class="subtitle">
-              Turning ideas into powerful web applications using Laravel, PHP,
-              JavaScript, MySQL, and modern frontend technologies.
-              I focus on clean code, responsive UI, and smooth user experience
-              while building dynamic sites, CRM modules, admin panels, or ERP features.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- STEP 03 -->
-      <div class="col-12 col-md-4">
-        <div class="item d-flex align-items-end">
-          <div class="item-count">03</div>
-          <div class="tl-widget heading">
-            <h4 class="title m-0">
-              <span class="title-before">Deliver</span>
-            </h4>
-            <div class="subtitle">
-              Delivering fast, secure, and fully responsive websites with ongoing
-              support. I ensure everything works perfectly — optimized performance,
-              smooth functionality, clean design, and a high-quality final product
-              ready for real-world use.
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-        <!-- ***** Approach Area End ***** -->
-
-       
-
-        <!-- ***** Contact Area Start ***** -->
-        <section id="contact" class="contact pt-0">
-          <div class="container">
-            <div class="row justify-content-between align-items-center">
-              <div class="col-12 col-md-5">
-                <!-- Intro -->
-                <div class="tl-widget heading">
-                  <h3 class="title m-0">
-                    <span class="title-before"
-                      >Schedule a call with me to see if</span
-                    >
-                    I can help
-                  </h3>
-                  <p>
-                    Reach out to me today and let’s discuss how I can help you
-                    achieve your goals.
-                  </p>
-                </div>
-
-                <!-- Icon List -->
-                <ul class="contact-icon-list list-unstyled my-4">
-                  <!-- Icon List Item -->
-                  <li class="icon-list-item">
-                    <a href="tel:+8928678948">
-                      <span class="icon-list-icon">
-                        <i class="fa-solid fa-phone"></i>
-                      </span>
-                      <span class="icon-list-text">+91 8928678948</span>
-                    </a>
-                  </li>
-
-                  <!-- Icon List Item -->
-                  <li class="icon-list-item">
-                    <a href="mailto:siddhesh.sonavane024@gmail.com">
-                      <span class="icon-list-icon">
-                        <i class="fa-solid fa-envelope-open"></i>
-                      </span>
-                      <span class="icon-list-text">siddhesh.sonavane024@gmail.com</span>
-                    </a>
-                  </li>
-
-                  <!-- Icon List Item -->
-                  <li class="icon-list-item">
-                    <a href="#">
-                      <span class="icon-list-icon">
-                        <i class="fa-solid fa-map"></i>
-                      </span>
-                      <span class="icon-list-text"
-                        >Kalyan West, Thane, Maharashtra, 421301</span
-                      >
-                    </a>
-                  </li>
-                </ul>
-
-                <!-- Social Icons -->
-                <div
-  class="tl-widget social-icons icon-box justify-content-start gap-0"
->
-  <!-- LinkedIn -->
-  <a
-    href="https://www.linkedin.com/in/siddhesh-sonavane/"
-    target="_blank"
-    class="icon-group stacked shape-circle social-icon"
-  >
-    <span class="icon icon-animated">
-      <i class="fa-brands fa-linkedin-in"></i>
-    </span>
-    <span class="icon icon-animated">
-      <i class="fa-brands fa-linkedin-in"></i>
-    </span>
-  </a>
-
-  <!-- GitHub -->
-  <a
-    href="https://github.com/Sidh2003"
-    target="_blank"
-    class="icon-group stacked shape-circle social-icon"
-  >
-    <span class="icon icon-animated">
-      <i class="fa-brands fa-github"></i>
-    </span>
-    <span class="icon icon-animated">
-      <i class="fa-brands fa-github"></i>
-    </span>
-  </a>
-
-  <!-- Instagram -->
-  <a
-    href="https://instagram.com/YOUR-USERNAME"
-    target="_blank"
-    class="icon-group stacked shape-circle social-icon"
-  >
-    <span class="icon icon-animated">
-      <i class="fa-brands fa-instagram"></i>
-    </span>
-    <span class="icon icon-animated">
-      <i class="fa-brands fa-instagram"></i>
-    </span>
-  </a>
-
-  <!-- WhatsApp -->
-  <a
-    href="https://wa.me/8928678948"
-    target="_blank"
-    class="icon-group stacked shape-circle social-icon"
-  >
-    <span class="icon icon-animated">
-      <i class="fa-brands fa-whatsapp"></i>
-    </span>
-    <span class="icon icon-animated">
-      <i class="fa-brands fa-whatsapp"></i>
-    </span>
-  </a>
-</div>
-
-              </div>
-
-              <div class="col-12 col-md-6">
-                <!-- Contact Form -->
-                <div id="tl-contact-form" class="tl-form mt-4 mt-md-0">
-                  <form class="contact-form" action="https://formspree.io/f/xrbojeob" method="POST">
-
-  <div class="form-floating mb-3">
-    <input
-      class="form-control"
-      aria-required="true"
-      placeholder="Name"
-      type="text"
-      name="your-name"
-      required
-    />
-  </div>
-
-  <div class="form-floating mb-3">
-    <input
-      class="form-control"
-      aria-required="true"
-      placeholder="Email Address"
-      type="email"
-      name="your-email"
-      required
-    />
-  </div>
-
-  <div class="form-floating mb-3">
-    <input
-      class="form-control"
-      placeholder="Phone Number"
-      type="tel"
-      name="phone"
-    />
-  </div>
-
-  <div class="form-floating mb-3">
-    <textarea
-      cols="40"
-      rows="5"
-      class="form-control"
-      placeholder="Message"
-      name="message"
-      required
-    ></textarea>
-  </div>
-
-  <!-- Optional: redirect to thank-you page -->
-  <!-- <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you.html"> -->
-
-  <div>
-    <input class="form-submit" type="submit" value="Submit Message" />
-  </div>
-
-</form>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- ***** Contact Area End ***** -->
-
-        <!-- ***** Footer Area Start ***** -->
-        <footer class="footer-area">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <div class="footer-content text-center py-4">
-                  <!-- Copyright -->
-                  <div class="copyright">
-                    &copy;2025 Siddhesh, All Rights Reserved By
-                    <a
-                      href="index.html"
-                      >Siddhesh Sonavane</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <!-- ***** Footer Area End ***** -->
-
-        <!--====== Scroll To Top Area Start ======-->
-        <div class="scroll-to-top">
-          <svg
-            class="progress-circle svg-content"
-            width="100%"
-            height="100%"
-            viewBox="-1 -1 102 102"
-          >
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-          </svg>
-        </div>
-        <!--====== Scroll To Top Area End ======-->
-
-        <!--====== Modal Search Area Start ======-->
-        <div id="search" class="modal fade p-0">
-          <div class="modal-dialog dialog-animated">
-            <div class="modal-content h-100">
-              <div class="modal-header" data-bs-dismiss="modal">
-                Search <i class="far fa-times-circle icon-close"></i>
-              </div>
-              <div class="modal-body">
-                <form role="search" action="#" method="GET" class="row">
-                  <div class="col-12 align-self-center p-0 px-md-3">
-                    <h3 class="modal-heading m-0">What are you looking for?</h3>
-                    <input
-                      type="text"
-                      name="s"
-                      class="form-control my-3"
-                      placeholder="Enter Keywords"
-                    />
-                    <input type="submit" class="search-submit" value="Search" />
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--====== Modal Search Area End ======-->
-
-        <!--====== Modal Menu Area Start ======-->
-        <div id="menu" class="modal fade p-0">
-          <div class="modal-dialog dialog-animated">
-            <div class="modal-content h-100">
-              <div class="modal-header" data-bs-dismiss="modal">
-                Menu <i class="icon-close"></i>
-              </div>
-              <div class="menu modal-body">
-                <div class="row w-100">
-                  <div class="items p-0 col-12 text-center">
-                    <ul class="navbar-nav items">
-                      <li class="menu-item nav-item">
-                        <a href="#services" class="nav-link smooth-anchor"
-                          >Services</a
-                        >
-                      </li>
-                      <li class="menu-item nav-item">
-                        <a href="#resume" class="nav-link smooth-anchor"
-                          >Resume</a
-                        >
-                      </li>
-                      <li class="menu-item nav-item">
-                        <a href="#portfolio" class="nav-link smooth-anchor"
-                          >Works</a
-                        >
-                      </li>
-                      <li class="menu-item nav-item">
-                        <a href="#skills" class="nav-link smooth-anchor"
-                          >Skills</a
-                        >
-                      </li>
-                      <li class="menu-item nav-item">
-                        <a href="#testimonial" class="nav-link smooth-anchor"
-                          >Testimonial</a
-                        >
-                      </li>
-                      <li class="menu-item nav-item">
-                        <a href="#contact" class="nav-link smooth-anchor"
-                          >Contact</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="contacts p-0 col-12 text-center">
-                    <!-- Append [navbar] -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--====== Modal Menu Area End ======-->
-      </div>
-      <!-- ***** Main Wrapper End ***** -->
-    </div>
-    <!-- ***** Main Area End ***** -->
-
-    <!-- ***** All jQuery Plugins ***** -->
-
-    <!-- jQuery(necessary for all JavaScript plugins) -->
-    <script src="assets/js/vendor/jquery.min.js"></script>
-
-    <!-- Bootstrap js -->
-    <script src="assets/js/vendor/popper.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-
-    <!-- Plugins js -->
-    <script src="assets/js/vendor/all.min.js"></script>
-    <script src="assets/js/vendor/counterup.js"></script>
-    <script src="assets/js/vendor/gsap.min.js"></script>
-    <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
-    <script src="assets/js/vendor/lenis.min.js"></script>
-    <script src="assets/js/vendor/SplitType.min.js"></script>
-    <script src="assets/js/vendor/shuffle.min.js"></script>
-    <script src="assets/js/vendor/slider.min.js"></script>
-
-    <!-- Main js -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/viewport.jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/SplitText.min.js"></script>
+    <script src="assets/js/TextPlugin.js"></script>
+    <script src="assets/js/chroma.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/parallaxie.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
-  </body>
+</body>
 
-  <!-- Mirrored from theme-land.com/relome/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Dec 2025 09:13:09 GMT -->
 </html>

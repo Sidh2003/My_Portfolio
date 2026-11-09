@@ -1,419 +1,939 @@
-/*----------------------------------------------
-*
-* [Main Scripts]
-*
-* Theme    : Relome - Personal Portfolio HTML Template
-* Version  : 1.0
-* Author   : Themeland
-* Support  : hridoy1272@gmail.com
-* 
-----------------------------------------------*/
+(function($) {
+    "use strict";
+  
+    const $documentOn = $(document);
+    const $windowOn = $(window);
+  
+    $documentOn.ready( function() {
+  
+      /* ================================
+       Mobile Menu Js Start
+    ================================ */
+    
+      $('#mobile-menu').meanmenu({
+        meanMenuContainer: '.mobile-menu',
+        meanScreenWidth: "1199",
+        meanExpand: ['<i class="far fa-plus"></i>'],
+        onePage: true,
+    });
 
-/*----------------------------------------------
+       $('#mobile-menus').meanmenu({
+        meanMenuContainer: '.mobile-menus',
+        meanScreenWidth: "19920",
+        meanExpand: ['<i class="far fa-plus"></i>'],
+    });
 
-[ALL CONTENTS]
+     $documentOn.on("click", ".mean-expand", function () {
+        let icon = $(this).find("i");
 
-1. Preloader
-2. Cursor
-3. Responsive Menu
-4. Navigation
-5. Scroll To Top
-6. GSAP Smooth Scroll
+        if (icon.hasClass("fa-plus")) {
+            icon.removeClass("fa-plus").addClass("fa-minus"); 
+        } else {
+            icon.removeClass("fa-minus").addClass("fa-plus"); 
+        }
+    });
 
-----------------------------------------------*/
+    /* ================================
+        Sidebar Toggle & Sticky Item Logic
+        ================================ */
 
-(function ($) {
-	"use strict";
+        // Open offcanvas
+        $(".sidebar__toggle").on("click", function () {
+        $(".offcanvas__info").addClass("info-open");
+        $(".offcanvas__overlay").addClass("overlay-open");
 
-	$(document).ready(function () {
+        // Hide sticky item
+        $(".sidebar-sticky-item").fadeOut().removeClass("active");
+        });
 
-		/*----------------------------------------------
-		1. Preloader
-		----------------------------------------------*/
-		const svg = document.getElementById("loader");
-		const tl = gsap.timeline();
-		const startShape = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
-		const endShape = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
+        // Close offcanvas
+        $(".offcanvas__close, .offcanvas__overlay").on("click", function () {
+        $(".offcanvas__info").removeClass("info-open");
+        $(".offcanvas__overlay").removeClass("overlay-open");
 
-		tl.to(".loader-container .loaded", {
-			delay: 1.2,
-			y: -50,
-			opacity: 0,
-			duration: 0.6,
-		}).to(svg, {
-			duration: 0.6,
-			attr: { d: startShape },
-			ease: "power1.easeIn",
-		}).to(svg, {
-			duration: 0.6,
-			attr: { d: endShape },
-			ease: "power1.easeOut",
-		}).to(".relome-preloader", {
-			y: -1000,
-			duration: 0.8,
-		}).to(".relome-preloader", {
-			zIndex: -1,
-			display: "none",
-		});
+        // Show sticky item
+        $(".sidebar-sticky-item").fadeIn().addClass("active");
+        });
 
-		/*----------------------------------------------
-		2. Cursor
-		----------------------------------------------*/
-		const cursor = document.getElementById('cursor');
-		const hoverElements = document.querySelectorAll('a');
-		const animateCursor = (props) => {
-			if (cursor) {
-				gsap.to(cursor, {
-					...props,
-					duration: 0.3,
-					ease: props.ease || 'power2.out'
-				});
-			}
-		};
+        /* ================================
+        Body Overlay Js Start
+        ================================ */
 
-		// Update cursor position on mouse move
-		document.addEventListener('mousemove', (e) => {
-			animateCursor({ x: e.clientX, y: e.clientY, opacity: 1 });
-		});
+        $(".body-overlay").on("click", function () {
+        $(".offcanvas__area").removeClass("offcanvas-opened");
+        $(".df-search-area").removeClass("opened");
+        $(".body-overlay").removeClass("opened");
 
-		// Add hover effects for specified elements
-		const addHoverEffects = (element) => {
-			element.addEventListener('mouseenter', () => {
-				cursor?.classList.add('hovered');
-				animateCursor({ scale: 2, opacity: 0, ease: 0.1 });
-			});
-			element.addEventListener('mouseleave', () => {
-				cursor?.classList.remove('hovered');
-				animateCursor({ scale: 1, opacity: 1 });
-			});
-		};
-		hoverElements.forEach(addHoverEffects);
+        // Show sticky item when overlay clicked
+        $(".sidebar-sticky-item").fadeIn().addClass("active");
+        });
 
-		/*----------------------------------------------
-		3. Responsive Menu
-		----------------------------------------------*/
-		function navResponsive() {
-			let navbar = $('.navbar .items');
-			let menu = $('#menu .items');
-			menu.html('');
-			navbar.clone().appendTo(menu);
-			$('.menu .icon-arrow-right').removeClass('icon-arrow-right').addClass('icon-arrow-down');
+        /* ================================
+        Offcanvas Link Click (Optional)
+        ================================ */
+
+        $(".offcanvas a").on("click", function () {
+        $(".sidebar-sticky-item").fadeIn().addClass("active");
+    });
+
+    
+      /* ================================
+       Sticky Header Js Start
+    ================================ */
+
+       $windowOn.on("scroll", function () {
+        if ($(this).scrollTop() > 250) {
+          $("#header-sticky").addClass("sticky");
+        } else {
+          $("#header-sticky").removeClass("sticky");
+        }
+      });      
+      
+       /* ================================
+       Video & Image Popup Js Start
+    ================================ */
+
+      $(".img-popup").magnificPopup({
+        type: "image",
+        gallery: {
+          enabled: true,
+        },
+      });
+
+      $(".video-popup").magnificPopup({
+        type: "iframe",
+        callbacks: {},
+      });
+  
+      /* ================================
+       Counterup Js Start
+    ================================ */
+
+      $(".count").counterUp({
+        delay: 15,
+        time: 4000,
+      });
+  
+      /* ================================
+       Wow Animation Js Start
+    ================================ */
+
+      new WOW().init();
+  
+      /* ================================
+       Nice Select Js Start
+    ================================ */
+
+    if ($('.single-select').length) {
+        $('.single-select').niceSelect();
+    }
+
+      /* ================================
+       Parallaxie Js Start
+    ================================ */
+
+      if ($('.parallaxie').length && $(window).width() > 991) {
+          if ($(window).width() > 768) {
+              $('.parallaxie').parallaxie({
+                  speed: 0.55,
+                  offset: 0,
+              });
+          }
+      }
+
+      /* ================================
+      Hover Active Js Start
+    ================================ */
+
+    $(".service-box-items, .career-waypoints-list li, .cta-content1 a, .work-positions-items").hover(
+		// Function to run when the mouse enters the element
+		function () {
+			// Remove the "active" class from all elements
+			$(".service-box-items, .career-waypoints-list li, .cta-content1 a, .work-positions-items").removeClass("active");
+			// Add the "active" class to the currently hovered element
+			$(this).addClass("active");
 		}
-		navResponsive();
+	);
 
-		$(window).on('resize', navResponsive);
+    /* ================================
+      Brand Slider Js Start
+    ================================ */
 
-		// Add a class for dropdowns based on the number of child items
-		$('.menu .dropdown-menu').each(function () {
-			var children = $(this).children('.dropdown').length;
-			$(this).addClass('children-' + children);
-		});
+    if ($('.brand-slider-2').length > 0) {
+      const brandSlider2 = new Swiper(".brand-slider-2", {
+          spaceBetween: 30,
+          speed: 1300,
+          loop: true,
+          autoplay: {
+              delay: 2000,
+              disableOnInteraction: false,
+          },
+          navigation: {
+              nextEl: ".array-next",
+              prevEl: ".array-prev",
+          },
+          breakpoints: {
+              1399: {
+                  slidesPerView: 5,
+              },
+              1199: {
+                  slidesPerView: 5.5,
+              },
+              991: {
+                  slidesPerView: 4.5,
+              },
+              767: {
+                  slidesPerView: 3.3,
+              },
+              575: {
+                  slidesPerView: 2,
+              },
+              0: {
+                  slidesPerView: 1.6,
+              },
+          },
+      });
+    }
+    /* ================================
+      Testimonial Slider Js Start
+    ================================ */
 
-		// Add 'prevent' class to nav items with dropdowns
-		$('.menu .nav-item.dropdown').each(function () {
-			var children = $(this).children('.nav-link');
-			children.addClass('prevent');
-		});
+    if ($('.testimonial-slider').length > 0) {
+      const testimonialSlider = new Swiper(".testimonial-slider", {
+          spaceBetween: 16,
+          speed: 1300,
+          loop: true,
+          autoplay: {
+              delay: 2000,
+              disableOnInteraction: false,
+          },
+          navigation: {
+              nextEl: ".array-next",
+              prevEl: ".array-prev",
+          },
+          breakpoints: {
+              1399: {
+                  slidesPerView: 3,
+              },
+              1199: {
+                  slidesPerView: 2.4,
+              },
+              991: {
+                  slidesPerView: 2,
+              },
+              767: {
+                  slidesPerView: 1.2,
+              },
+              575: {
+                  slidesPerView: 1,
+              },
+              0: {
+                  slidesPerView: 1,
+              },
+          },
+      });
+    }
 
-		// Toggle dropdown menu and rotate icon-arrow-down
-		$(document).on('click', '#menu .nav-item .nav-link', function (event) {
-			if ($(this).hasClass('prevent')) {
-				event.preventDefault();
-			}
+    /* ================================
+      Project Slider Js Start
+    ================================ */
+     if ($('.project-slider').length > 0) {
+      const projectSlider = new Swiper(".project-slider", {
+          spaceBetween: 16,
+          speed: 1300,
+          loop: true,
+          autoplay: {
+              delay: 2000,
+              disableOnInteraction: false,
+          },
+          navigation: {
+              nextEl: ".array-next",
+              prevEl: ".array-prev",
+          },
+          breakpoints: {
+              1399: {
+                  slidesPerView: 3,
+              },
+              1199: {
+                  slidesPerView: 2,
+              },
+              991: {
+                  slidesPerView: 2,
+              },
+              767: {
+                  slidesPerView: 1.6,
+              },
+              575: {
+                  slidesPerView: 1,
+              },
+              0: {
+                  slidesPerView: 1,
+              },
+          },
+      });
+    }
 
-			var nav_link = $(this);
-			var parentNav = nav_link.closest('.nav-item');
-			var currentDropdown = nav_link.next('.dropdown-menu');
-			var arrowIcon = nav_link.find('.icon-arrow-down');
+     if ($('.project-slider-10').length > 0) {
+      const projectSlider10 = new Swiper(".project-slider-10", {
+          spaceBetween: 30,
+          speed: 1300,
+          loop: true,
+          autoplay: {
+              delay: 2000,
+              disableOnInteraction: false,
+          },
+          navigation: {
+              nextEl: ".array-next",
+              prevEl: ".array-prev",
+          },
+          breakpoints: {
+              1399: {
+                  slidesPerView: 2.5,
+              },
+              1199: {
+                  slidesPerView: 2,
+              },
+              991: {
+                  slidesPerView: 3,
+              },
+              767: {
+                  slidesPerView: 2,
+              },
+              575: {
+                  slidesPerView: 1,
+              },
+              0: {
+                  slidesPerView: 1,
+              },
+          },
+      });
+    }
 
-			parentNav.siblings().find('.dropdown-menu.show').slideUp(300).removeClass('show');
-			parentNav.siblings().find('.icon-arrow-down').removeClass('rotate-arrow');
-			currentDropdown.slideToggle(300).toggleClass('show');
-			arrowIcon.toggleClass('rotate-arrow');
+    if ($('.project-slider-6').length > 0) {
+    const ProjectSlider6 = new Swiper(".project-slider-6", {
+        spaceBetween: 30,
+        speed: 1300,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".array-next",
+            prevEl: ".array-prev",
+        },
+        breakpoints: {
+            1199: {
+                slidesPerView: 2,
+            },
+            991: {
+                slidesPerView: 2,
+            },
+            767: {
+                slidesPerView: 1,
+            },
+            575: {
+                slidesPerView: 1,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+    });
+   }
 
-			if (nav_link.hasClass('smooth-anchor')) {
-				$('#menu').modal('hide');
-			}
-		});
+    /* ================================
+      Comprehensive Service Box Js Start
+    ================================ */
 
-		/*----------------------------------------------
-		4. Navigation
-		----------------------------------------------*/
-		var position = $(window).scrollTop();
-		var toTop = $('#scroll-to-top');
-		var navbar = $('header .navbar');
+    if (document.querySelectorAll(".comprehensive-items").length) {
+    const comprehensiveItems = document.querySelectorAll(".comprehensive-items");
 
-		var relome_vars = {
-			homeUrl: window.location.origin + window.location.pathname.replace(/[^\/]*$/, '')
-		};
+    comprehensiveItems.forEach((box) => {
+        const hoverImg = box.querySelector(".hover-image");
+        if (!hoverImg) return;
 
-		toTop.hide();
+        box.addEventListener("mousemove", (event) => {
+        const rect = box.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
 
-		$(window).on('scroll', function () {
-			let scroll = $(window).scrollTop();
-			if (!navbar.hasClass('relative')) {
-				if (scroll > position) {
-					if (window.screen.width >= 767) {
-						navbar.fadeOut('fast');
-					} else {
-						navbar.addClass('navbar-sticky');
-					}
-					toTop.fadeOut('fast');
-				} else {
-					if (position < 76) {
-						navbar.slideDown('fast').removeClass('navbar-sticky');
-					} else {
-						navbar.slideDown('fast').addClass('navbar-sticky');
-					}
-					if (position > 1023 && window.screen.width >= 767) {
-						toTop.fadeIn('fast');
-					} else {
-						toTop.fadeOut('fast');
-					}
-				}
-				position = scroll;
-			}
-		});
+        hoverImg.style.opacity = "1";
+        hoverImg.style.visibility = "visible";
+        hoverImg.style.transform = `translate(${x}px, ${y}px) rotate(10deg)`;
+        });
 
-		$('.nav-link').each(function () {
-			let href = $(this).attr('href');
+        box.addEventListener("mouseleave", () => {
+        hoverImg.style.opacity = "0";
+        hoverImg.style.visibility = "hidden";
+        hoverImg.style.transform = `translateY(-50%) rotate(10deg)`;
+        });
+    });
+    }
 
-			if (href && href.length > 1 && href.indexOf('#') != -1) {
-				$(this).addClass('smooth-anchor');
-			}
-		});
 
-		$(document).on('click', '.smooth-anchor', function (event) {
-			let href = $(this).attr('href');
-		
-			if (typeof href === 'string' && href.startsWith('#')) {
-				let target = $(href);
-				event.preventDefault();
-		
-				if (target.length) {
-					// Scroll to the section on the current page
-					$('html, body').animate({
-						scrollTop: target.offset().top
-					}, 500, function() {
-						// Update URL hash after scrolling
-						history.replaceState(null, null, href);
-					});
-				} else {
-					// Redirect to homepage with the anchor if not on homepage
-					if (!$('body').hasClass('home')) {
-						window.location.href = relome_vars.homeUrl + href;
-					}
-				}
-			}
-		});
+    /* ================================
+      Feature Box Slider Js Start
+    ================================ */
+    if ($(".slide").length) {
 
-		$(document).on('click', 'a[href="#"]', function (event) {
-			event.preventDefault();
-		});
+            var index = 0;
 
-		$('.dropdown-menu').each(function () {
-			let dropdown = $(this);
+            function updateSlider() {
 
-			dropdown.hover(function () {
-				dropdown.parent().find('.nav-link').first().addClass('active');
-			}, function () {
-				dropdown.parent().find('.nav-link').first().removeClass('active');
-			});
-		});
+                var $slides = $(".slide");
+                var total = $slides.length;
 
-		/*----------------------------------------------
-		5. Scroll To Top
-		----------------------------------------------*/
-		var progressPath = document.querySelector('.scroll-to-top path');
+                $slides.removeClass("active prev next");
 
-		if (!progressPath) {
-			return;
-		}
+                $slides.eq(index).addClass("active");
+                $slides.eq((index - 1 + total) % total).addClass("prev");
+                $slides.eq((index + 1) % total).addClass("next");
+            }
 
-		var pathLength = progressPath.getTotalLength();
+            // Next
+            $(document).on("click", ".array-next", function (e) {
+                e.preventDefault();
 
-		progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-		progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-		progressPath.style.strokeDashoffset = pathLength;
-		progressPath.getBoundingClientRect();
-		progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+                var total = $(".slide").length;
+                index = (index + 1) % total;
 
-		var updateProgress = function () {
-			var scroll = $(window).scrollTop();
-			var height = $(document).height() - $(window).height();
-			var progress = pathLength - (scroll * pathLength / height);
-			progressPath.style.strokeDashoffset = progress;
-		};
+                updateSlider();
+            });
 
-		updateProgress();
+            // Prev
+            $(document).on("click", ".array-prev", function (e) {
+                e.preventDefault();
 
-		$(window).on('scroll', function () {
-			updateProgress();
+                var total = $(".slide").length;
+                index = (index - 1 + total) % total;
 
-			// Scroll-to-Top visibility toggle
-			var offset = 50;
+                updateSlider();
+            });
 
-			if ($(this).scrollTop() > offset) {
-				$('.scroll-to-top').addClass('active-progress');
-			} else {
-				$('.scroll-to-top').removeClass('active-progress');
-			}
-		});
+            updateSlider();
+        }
 
-		$('.scroll-to-top').on('click', function (event) {
-			event.preventDefault();
+  
+    /* ================================
+        Mouse Cursor Animation Js Start
+    ================================ */
 
-			$('html, body').animate({
-				scrollTop: 0
-			}, 550);
-		});
+    if ($(".mouseCursor").length > 0) {
+        function itCursor() {
+            var myCursor = jQuery(".mouseCursor");
+            if (myCursor.length) {
+                if ($("body")) {
+                    const e = document.querySelector(".cursor-inner"),
+                        t = document.querySelector(".cursor-outer");
+                    let n, i = 0, o = !1;
+                    window.onmousemove = function(s) {
+                        if (!o) {
+                            t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)";
+                        }
+                        e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)";
+                        n = s.clientY;
+                        i = s.clientX;
+                    };
+                    $("body").on("mouseenter", "button, a, .cursor-pointer", function() {
+                        e.classList.add("cursor-hover");
+                        t.classList.add("cursor-hover");
+                    });
+                    $("body").on("mouseleave", "button, a, .cursor-pointer", function() {
+                        if (!($(this).is("a", "button") && $(this).closest(".cursor-pointer").length)) {
+                            e.classList.remove("cursor-hover");
+                            t.classList.remove("cursor-hover");
+                        }
+                    });
+                    e.style.visibility = "visible";
+                    t.style.visibility = "visible";
+                }
+            }
+        }
+        itCursor();
+    }
 
-		/*----------------------------------------------
-		8. Slides
-		----------------------------------------------*/
-		setTimeout(function() {
+    /* ================================
+        Back To Top Button Js Start
+    ================================ */
+    $windowOn.on('scroll', function() {
+        var windowScrollTop = $(this).scrollTop();
+        var windowHeight = $(window).height();
+        var documentHeight = $(document).height();
 
-			$('.no-slider .left').addClass('init');
+        if (windowScrollTop + windowHeight >= documentHeight - 10) {
+            $("#back-top").addClass("show");
+        } else {
+            $("#back-top").removeClass("show");
+        }
+    });
 
-		}, 1200)
+    $documentOn.on('click', '#back-top', function(e) {
+        e.preventDefault();
+        $('html, body').stop().animate({ scrollTop: 0 }, 600);
+        return false;
+    });
 
-		var animation = function(slider) {
 
-			let image = $(slider + ' .swiper-slide-active img');
-			let title = $(slider + ' .title');
-			let description = $(slider + ' .description');
-			let btn = $(slider + ' .btn');
-			let nav = $(slider + ' nav');
+     /* ================================
+           Image Move scale Js Start
+        ================================ */
+        const $section = $('.hero-section1');
+        const $target = $('.tilt_scale');
 
-			image.toggleClass('aos-animate');
-			title.toggleClass('aos-animate');
-			description.toggleClass('aos-animate');
-			btn.toggleClass('aos-animate');
-			nav.toggleClass('aos-animate');
+        if ($section.length && $target.length) {
+            let requestId;
 
-			setTimeout(function() {
+            $section.on('mousemove', function(e) {
+                if (requestId) {
+                    cancelAnimationFrame(requestId);
+                }
 
-				image.toggleClass('aos-animate');
-				title.toggleClass('aos-animate');
-				description.toggleClass('aos-animate');
-				btn.toggleClass('aos-animate');
-				nav.toggleClass('aos-animate');
+                requestId = requestAnimationFrame(() => {
+                    const offset = $section.offset();
+                    const width = $section.outerWidth();
+                    const height = $section.outerHeight();
 
-				AOS.refresh();
+                    const x = e.pageX - offset.left;
+                    const y = e.pageY - offset.top;
 
-			}, 100)
+                    const rotateY = ((x / width) - 0.5) * 20;
+                    const rotateX = ((y / height) - 0.5) * -20;
 
-			if ($('.full-slider').hasClass('animation')) {
+                    $target.css({
+                        transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`
+                    });
+                });
+            });
 
-				$('.full-slider .left').addClass('off');
-				$('.full-slider .left').removeClass('init');
+            $section.on('mouseleave', function() {
+                if (requestId) {
+                    cancelAnimationFrame(requestId);
+                }
+                $target.css({
+                    transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)'
+                });
+            });
+        }
 
-				setTimeout(function() {
+        if (window.matchMedia("(min-width: 1200px)").matches) {
+            document.querySelectorAll(".tv-desti-content").forEach((section) => {
+                let items = section.querySelectorAll(".tv-desti-item");
 
-					$('.full-slider .left').removeClass('off');
+                gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 70%",
+                        toggleActions: "play reverse play reverse",
+                        markers: false,
+                    },
+                })
+                .from(items, {
+                    xPercent: 70,
+                    opacity: 0,
+                    ease: "back.out(2.5)",
+                    duration: 1,
+                    stagger: -0.2,
+                });
+            });
+        }
+	
+    /* ================================
+       GSAP & Title Animation Setup
+    ================================ */
+    if (typeof gsap !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger, SplitText);
 
-				}, 200)
+        gsap.config({
+            nullTargetWarn: false,
+        });
+    }
 
-				setTimeout(function() {
+     /* ================================
+       Text Anim Js Start
+    ================================ */
 
-					$('.full-slider .left').addClass('init');
+      if (
+    typeof SplitText !== "undefined" &&
+        document.querySelectorAll(".split-title").length > 0
+        ) {
+    document.querySelectorAll(".split-title").forEach((title) => {
 
-				}, 1000)
+        // split by words + chars (IMPORTANT)
+        const split = new SplitText(title, {
+        type: "words,chars"
+        });
 
-			} else {
+        // add class to chars
+        split.chars.forEach((char) => {
+        char.classList.add("char");
+        });
 
-				$('.full-slider .left').addClass('init');
-			}
-		}
+        // GSAP animation
+        gsap.to(split.chars, {
+        scrollTrigger: {
+            trigger: title,
+            start: "top 90%",
+            toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        clipPath: "inset(0% 0% -15% 0%)",
+        x: 0,
+        opacity: 1,
+        ease: "power4.out",
+        stagger: 0.03
+        });
 
-		var midSlider = new Swiper('.slider-mid', {
+    });
+    }
 
-			autoplay: true,
-			loop: true,
-			slidesPerView: 1,
-			spaceBetween: 20,
-			breakpoints: {
-				767: {
-					slidesPerView: 2,
-					spaceBetween: 30
+     if (typeof gsap !== "undefined") {
+          gsap.registerPlugin(ScrollTrigger, SplitText);
+
+          let mm = gsap.matchMedia();
+
+          mm.add("(min-width: 1200px)", () => {
+
+              let splits = [];
+
+              // ===== tz-sub-tilte =====
+              $('.tz-sub-tilte').each(function (index, el) {
+
+              let split = new SplitText(el, {
+                  type: "lines,words,chars",
+                  linesClass: "split-line"
+              });
+
+              splits.push(split);
+
+              gsap.set(split.chars, {
+                  opacity: 0,
+                  x: 7
+              });
+
+              gsap.to(split.chars, {
+                  scrollTrigger: {
+                  trigger: el,
+                  start: "top 90%",
+                  end: "top 60%",
+                  scrub: 1
+                  },
+                  x: 0,
+                  opacity: 1,
+                  duration: 0.7,
+                  stagger: 0.2
+              });
+              });
+
+              // ===== tz-itm-title =====
+              $('.tz-itm-title').each(function (index, el) {
+
+              let split = new SplitText(el, {
+                  type: "lines,words,chars",
+                  linesClass: "split-line"
+              });
+
+              splits.push(split);
+
+              gsap.set(split.chars, {
+                  opacity: 0.3,
+                  x: -7
+              });
+
+              gsap.to(split.chars, {
+                  scrollTrigger: {
+                  trigger: el,
+                  start: "top 92%",
+                  end: "top 60%",
+                  scrub: 1
+                  },
+                  x: 0,
+                  opacity: 1,
+                  duration: 0.7,
+                  stagger: 0.2
+              });
+              });
+
+              // ðŸ”¥ MOST IMPORTANT PART
+              ScrollTrigger.refresh();
+
+              // ðŸ”¥ cleanup on breakpoint change
+              return () => {
+              splits.forEach(split => split.revert());
+              ScrollTrigger.getAll().forEach(st => st.kill());
+              };
+
+          });
+    }
+
+     /* ================================
+       Service Panel Js Start
+    ================================ */
+
+	let sv = gsap.matchMedia();
+	sv.add("(min-width: 1199px)", () => {
+		let tl = gsap.timeline();
+		let projectpanels = document.querySelectorAll('.tp-service-panel');
+		let baseOffset = 120;
+		let offsetIncrement = 120;
+
+		projectpanels.forEach((section, index) => {
+			let topOffset = baseOffset + (index * offsetIncrement);
+			tl.to(section, {
+				scrollTrigger: {
+					trigger: section,
+					pin: section,
+					scrub: 1,
+					start: `top ${topOffset}px`,
+					end: "bottom 80%",
+					endTrigger: '.tp-service-pin',
+					pinSpacing: false,
+					markers: false,
 				},
-				1023: {
-					slidesPerView: 3,
-					spaceBetween: 30
-				}
-			},
-			pagination: {
-				el: '.swiper-pagination',
-				type: "fraction",
-			}
-		})
-
-		/*----------------------------------------------
-		13. Filter Items
-		----------------------------------------------*/
-		if ( $('.filter-items').length ) {
-
-			$('.portfolio').each(function(index) {
-
-				var count = index + 1;
-		
-				$(this).find('.filter-items').removeClass('filter-items').addClass('filter-items-'+count);
-				$(this).find('.filter-item').removeClass('filter-item').addClass('filter-item-'+count);
-				$(this).find('.filter-btn').removeClass('filter-btn').addClass('filter-btn-'+count);
-				
-				var Shuffle = window.Shuffle;
-				var Filter  = new Shuffle(document.querySelector('.filter-items-'+count), {
-					itemSelector: '.filter-item-'+count,
-					buffer: 1,
-				})
-		
-				$('.filter-btn-'+count).on('change', function (e) {
-		
-					var input = e.currentTarget;
-					
-					if (input.checked) {
-						Filter.filter(input.value);
-					}
-				})
 			});
-
-		}
-
-		/*----------------------------------------------
-		6. counterUp
-		----------------------------------------------*/
-		const counterUp = window.counterUp.default;
-
-		const callback = entries => {
-			entries.forEach(entry => {
-				const el = entry.target;
-				if (entry.isIntersecting && !el.classList.contains('is-visible')) {
-					counterUp(el, {
-						duration: 1000,
-						delay: 10,
-					});
-					el.classList.add('is-visible');
-				}
-			});
-		};
-
-		const IO = new IntersectionObserver(callback, { threshold: 1 });
-
-		// Use querySelectorAll and loop through each '.counter' element
-		const counters = document.querySelectorAll('.counter');
-		counters.forEach(counter => IO.observe(counter));
-
-		/*----------------------------------------------
-		6. GSAP Smooth Scroll
-		----------------------------------------------*/
-		const lenis = new Lenis();
-		lenis.on('scroll', ScrollTrigger.update);
-
-		gsap.ticker.add((time) => {
-			lenis.raf(time * 1000);
 		});
-
-		gsap.ticker.lagSmoothing(0);
 	});
+  
 
-}(jQuery));
+    /* ================================
+       Advance Ani Js Start
+    ================================ */
+
+    if (window.innerWidth > 1199) {
+        const items = document.querySelectorAll(".advance-wrap .advance-item");
+        if (items.length < 4) return;
+
+        const advanced = gsap.timeline({
+            scrollTrigger: {
+            trigger: ".advance-wrap",
+            start: "top 60%",
+            toggleActions: "play none none reverse",
+            markers: false,
+            },
+            defaults: {
+            ease: "power1.out", //
+            duration: 1,
+            },
+        });
+        advanced
+            .from(items[0], { xPercent: 100, rotate: -8 })
+            .from(items[1], { xPercent: 30, rotate: 4.13 }, "<")
+            .from(items[2], { xPercent: -30, rotate: -6.42 }, "<")
+            .from(items[3], { xPercent: -60, rotate: -12.15 }, "<");
+    }
+
+    
+    }); // End Document Ready Function
+
+
+    /* ================================
+       Preloader Js Start
+    ================================ */
+	const svg = document.getElementById("preloaderSvg");
+	const preTl = gsap.timeline({
+		onComplete: startAnimationAfterPreloader,
+	});
+	const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+	const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
+	preTl.to(".preloader-heading .load-text , .preloader-heading .cont", {
+		delay: 1.5,
+		y: -100,
+		opacity: 0,
+	});
+	preTl
+		.to(svg, {
+			duration: 0.5,
+			attr: { d: curve },
+			ease: "power2.easeIn",
+		})
+		.to(svg, {
+			duration: 0.5,
+			attr: { d: flat },
+			ease: "power2.easeOut",
+		});
+	preTl.to(".preloader", {
+		delay: 1.5,
+		y: -1500,
+	});
+	preTl.to(".preloader", {
+		zIndex: -1,
+		display: "none",
+	});
+	let svgText = document.querySelector("svg text");
+	function startAnimationAfterPreloader() {
+		if (svgText) {
+			// Add a class or directly apply styles to trigger the stroke animation
+			svgText.classList.add("animate-stroke");
+		}
+	}
+
+     const $calendar = $('.calendar-wrapper');
+
+    if (!$calendar.length) {
+      return;
+    }
+
+    const $monthYear = $('#monthYear');
+    const $daysContainer = $('#days');
+    const $prevBtn = $('#prev');
+    const $nextBtn = $('#next');
+
+    let currentDate = new Date();
+    let selectedDay = null;
+
+    const monthNames = [
+      "January","February","March","April","May","June",
+      "July","August","September","October","November","December"
+    ];
+
+    function renderCalendar() {
+      $daysContainer.empty();
+
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth();
+      const today = new Date();
+
+      const firstDay = new Date(year, month, 1).getDay();
+      const lastDate = new Date(year, month + 1, 0).getDate();
+
+      $monthYear.text(monthNames[month] + ' ' + year);
+
+      for (let i = 0; i < firstDay; i++) {
+        $daysContainer.append('<div class="day empty"></div>');
+      }
+
+      for (let day = 1; day <= lastDate; day++) {
+
+        let classes = 'day';
+
+        if (
+          day === today.getDate() &&
+          month === today.getMonth() &&
+          year === today.getFullYear()
+        ) {
+          classes += ' today';
+        }
+
+        const dayHtml = `<div class="${classes}" data-day="${day}">${day}</div>`;
+        $daysContainer.append(dayHtml);
+      }
+    }
+
+    // Prev Month
+    $prevBtn.on('click.calendar', function () {
+      currentDate.setMonth(currentDate.getMonth() - 1);
+      renderCalendar();
+    });
+
+    // Next Month
+    $nextBtn.on('click.calendar', function () {
+      currentDate.setMonth(currentDate.getMonth() + 1);
+      renderCalendar();
+    });
+
+    // Day Click (Delegation)
+    $daysContainer.on('click.calendar', '.day:not(.empty)', function () {
+      $daysContainer.find('.day').removeClass('selected');
+      $(this).addClass('selected');
+
+      selectedDay = {
+        year: currentDate.getFullYear(),
+        month: currentDate.getMonth() + 1,
+        day: $(this).data('day')
+      };
+
+      console.log('Selected Date:', selectedDay);
+    });
+
+    renderCalendar();
+
+
+  
+  
+    
+  
+    /* ================================
+       Single Page Smooth Anchor Scroll & ScrollSpy
+    ================================ */
+    var navSections = ["#hero", "#about", "#skills", "#experience", "#projects", "#education", "#contact"];
+
+    function getHeaderOffset() {
+      var header = document.querySelector("#header-sticky");
+      return header ? header.offsetHeight + 15 : 95;
+    }
+
+    function scrollToSection(targetId) {
+      if (!targetId || targetId === "#" || targetId === "#0") return;
+      var $target = jQuery(targetId);
+      if (!$target.length) return;
+
+      var headerOffset = getHeaderOffset();
+
+      if (targetId === "#hero") {
+        jQuery("html, body").stop().animate({ scrollTop: 0 }, 500);
+      } else {
+        var targetTop = $target.offset().top - headerOffset;
+        jQuery("html, body").stop().animate({ scrollTop: Math.max(0, targetTop) }, 500);
+      }
+
+      setActiveNav(targetId);
+    }
+
+    function setActiveNav(targetId) {
+      if (!targetId) return;
+      jQuery(".main-menu ul li a, .mean-nav ul li a").removeClass("active");
+      jQuery(".main-menu ul li a[href='" + targetId + "'], .mean-nav ul li a[href='" + targetId + "']").addClass("active");
+    }
+
+    function updateScrollSpy() {
+      var scrollPos = jQuery(window).scrollTop();
+      var headerOffset = getHeaderOffset();
+      var checkPosition = scrollPos + headerOffset + 50;
+
+      var currentSection = "#hero";
+      for (var i = 0; i < navSections.length; i++) {
+        var $sec = jQuery(navSections[i]);
+        if ($sec.length) {
+          var secTop = $sec.offset().top;
+          if (checkPosition >= secTop) {
+            currentSection = navSections[i];
+          }
+        }
+      }
+      setActiveNav(currentSection);
+    }
+
+    jQuery(document).on("click", "a[href^=\"#\"]", function (e) {
+      var targetId = jQuery(this).attr("href");
+      if (targetId && targetId.length > 1 && jQuery(targetId).length) {
+        e.preventDefault();
+
+        // Close mobile drawer and overlays if open
+        jQuery(".offcanvas__info").removeClass("info-open");
+        jQuery(".offcanvas__overlay").removeClass("overlay-open");
+        jQuery(".sidebar-sticky-item").fadeIn().addClass("active");
+
+        if (jQuery(".mean-nav ul").length) {
+          jQuery(".mean-nav ul").slideUp(200);
+          jQuery(".meanmenu-reveal").removeClass("meanclose");
+        }
+
+        scrollToSection(targetId);
+      }
+    });
+
+    // Back to top button integration
+    $documentOn.on('click', '#back-top', function (e) {
+      e.preventDefault();
+      scrollToSection("#hero");
+      return false;
+    });
+
+    // Hook scrollspy to window scroll and ScrollTrigger
+    jQuery(window).on("scroll", updateScrollSpy);
+    if (typeof ScrollTrigger !== "undefined") {
+      ScrollTrigger.addEventListener("scrollEnd", updateScrollSpy);
+    }
+    updateScrollSpy();
+
+  })(jQuery); // End jQuery
